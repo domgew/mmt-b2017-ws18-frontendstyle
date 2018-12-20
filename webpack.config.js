@@ -6,9 +6,9 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const globImporter = require('node-sass-glob-importer');
 
 module.exports = {
-  entry: { main:'./src/index.js' },
+  entry: { main: './src/index.js' },
   output: {
-    filename: '[name].[chunkhash].js',
+    filename: '[name].[hash].js',
     path: path.resolve(__dirname, 'dist')
   },
 
@@ -45,6 +45,11 @@ module.exports = {
             }
           }
         ]
+      },
+
+      {
+          test: /\.css/,
+          loader: 'style-loader!css-loader'
       },
 
       // include fonts in your build
@@ -140,9 +145,6 @@ module.exports = {
       filename: 'index.html'
     }),
 
-    // new HtmlWebpackPartialsPlugin({
-    //   path: './src/partials/*'
-    // })
   ],
 
   optimization: {

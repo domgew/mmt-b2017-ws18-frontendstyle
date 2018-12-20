@@ -1,0 +1,76 @@
+.section-components {
+    .component {
+        margin-top: 1em;
+        margin-bottom: 1em;
+        $border: 1px solid rgba(0,0,0,0.5);
+        border: $border;
+        background: #f5f2f0;
+        nav {
+            display: flex;
+            ul {
+                display: flex;
+                justify-content: flex-start;
+                align-content: flex-end;
+                flex-direction: row;
+                list-style: none;
+                margin: 0;
+                padding: 0;
+                flex-grow: 1;
+                max-width: 500px;
+                li {
+                    flex-grow: 1;
+                    flex-basis: 33%;
+                    a {
+                        cursor: pointer;
+                        display: block;
+                        padding: 1em 1em 0.3em 1em;
+                        text-align: center;
+                    }
+                    &:not(:nth-child(1)) a {
+                        border-left: $border;
+                    }
+                }
+            }
+        }
+        &.show-example, &:not(.show-html):not(.show-css) {
+            nav ul li a[data-value="example"] {
+                background: #CBC5C1;
+            }
+            .component-preview > *:nth-child(1) {
+                display: block;
+            }
+        }
+    
+        &.show-html {
+            nav ul li a[data-value="html"] {
+                background: #CBC5C1;
+            }
+            .component-preview > *:nth-child(2) {
+                display: block;
+            }
+        }
+        &.show-css {
+            nav ul li a[data-value="css"] {
+                background: #CBC5C1;
+            }
+            .component-preview > *:nth-child(3) {
+                display:block;
+            }
+        }
+        .component-preview {
+            .example {
+                padding: 1rem;
+                background: #f5f2f0;
+                padding: 1em;
+                overflow: auto;
+                text-shadow: 0 1px white;
+                @import "components/*";
+            }
+        
+            & > * {
+                display: none;
+                margin: 0;
+            }
+        }
+    }
+}

@@ -1,15 +1,54 @@
 import './sass/style.scss'
-// If you need images optimized that are not referenced in you source code, uncomment the following line:
-// require.context("./images/", true, /\.(png|svg|jpg|gif)$/);
 
-// example code
-var message = 'Supports Babel!'
-console.log(`Important message: ${message}`)
 
-const babo = {
-  isFunny: true,
-  name: 'Tarik',
-  weight: '120 kg'
-}
+import Prism from 'prismjs';
+import 'prismjs/themes/prism.css'
+// import 'prismjs/components/prism-html.min.js'
+// import 'prismjs/components/prism-css.min.js'
 
-console.log({ ...babo })
+
+ //"webpack-dev-server --mode development --open"
+
+  const elements = document.querySelectorAll('.component-preview');
+
+  elements.forEach(element=>{
+    const tabExample = document.createElement('a'), tabHTML = document.createElement('a'), tabCSS = document.createElement('a');
+    const tabLiE = document.createElement('li'),tabLiH = document.createElement('li'),tabLiC = document.createElement('li');
+    const tabUl = document.createElement('ul');
+    const tabs = document.createElement('nav');
+    //text for tabs
+    tabExample.appendChild(document.createTextNode('Example'));
+    tabExample.setAttribute('data-value','example');
+    tabHTML.appendChild(document.createTextNode('HTML'));
+    tabHTML.setAttribute('data-value','html');
+    tabCSS.appendChild(document.createTextNode('CSS'));
+    tabCSS.setAttribute('data-value','css');
+    //event listeners for tabs
+    tabExample.addEventListener('click',(e)=>{
+      e.preventDefault();
+      element.parentElement.classList.remove('show-example','show-html','show-css');
+      element.parentElement.classList.add('show-example');
+    });
+    tabHTML.addEventListener('click',(e)=>{
+      e.preventDefault();
+      element.parentElement.classList.remove('show-example','show-html','show-css');
+      element.parentElement.classList.add('show-html');
+    });
+    tabCSS.addEventListener('click',(e)=>{
+      e.preventDefault();
+      element.parentElement.classList.remove('show-example','show-html','show-css');
+      element.parentElement.classList.add('show-css');
+    });
+    //tab in list item
+    tabLiE.appendChild(tabExample);
+    tabLiH.appendChild(tabHTML);
+    tabLiC.appendChild(tabCSS);
+    //list item in unordered list
+    tabUl.appendChild(tabLiE);
+    tabUl.appendChild(tabLiH);
+    tabUl.appendChild(tabLiC);
+    //unordered list in navigation
+    tabs.appendChild(tabUl);
+    //insert the navigation before the tabbed view
+    element.parentElement.insertBefore(tabs,element);
+  });
