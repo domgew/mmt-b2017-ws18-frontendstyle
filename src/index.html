@@ -49,7 +49,17 @@
 
 <body>
 
-    <h1>Welcome to the baboilerplate!</h1>
+    <main>
+        <h1>Debtrack: Style Guide</h1>
+
+        <%= require('./partials/brandguide/_index.html') %>
+
+        <%= require('./partials/methodology/_index.html') %>
+        
+        <section>
+            <h2>Components</h2>
+        </section>
+    </main>
 
     <script src="<%= htmlWebpackPlugin.files.chunks.main.entry %>"></script>
 </body>

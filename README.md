@@ -20,3 +20,8 @@
 * creates all the files needed for production in the build directory
 * minifies images (jpg, png, jpg, svg)
 * includes various icon references for touch devices
+
+## Netlify
+https://modest-shockley-e911b5.netlify.com/
+
+push to master

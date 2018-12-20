@@ -1,6 +1,7 @@
 const path = require('path');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const HtmlWebpackPartialsPlugin = require('html-webpack-partials-plugin');
 const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const globImporter = require('node-sass-glob-importer');
@@ -56,6 +57,14 @@ module.exports = {
             name: '[name].[ext]',
             outputPath: 'fonts/'
           }
+        }]
+      },
+
+      {
+        test: /\_.*\.html$/,
+        include: [path.resolve(__dirname, 'src/partials')],
+        use: [{
+          loader:  'html-loader'
         }]
       },
 
@@ -127,7 +136,11 @@ module.exports = {
       hash: true,
       template: './src/index.html',
       filename: 'index.html'
-    })
+    }),
+
+    // new HtmlWebpackPartialsPlugin({
+    //   path: './src/partials/*'
+    // })
   ],
 
   optimization: {
