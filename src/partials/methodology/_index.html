@@ -1,73 +1,8 @@
 <section>
     <h2>Methodology</h2>
-    <%= require('./indentation.html') %>
-    <section>
-        <h3>Units</h3>
-        <p>
-            You should use percent (%) to specify width.
-        </p>
-        <p>
-            You should use rem for text size, element heights, paddings and margins.
-        </p>
-    </section>
-    <section>
-        <h3>File Structure</h3>
-        <ul>
-            <li class="folder">
-                <span>src</span>
-                <small>all the files used to create the application</small>
-                <ul>
-                    <li class="folder">
-                        <span>images</span>
-                        <small>images used by the application</small>
-                    </li>
-                    <li class="folder">
-                        <span>sass</span>
-                        <small>style files</small>
-                    </li>
-                    <li class="folder">
-                        <span>pages</span>
-                        <small>the pages of the application</small>
-                    </li>
-                    <li class="folder">
-                        <span>libs</span>
-                        <small>supporting libraries written by us</small>
-                    </li>
-                </ul>
-            </li>
-            <li class="folder">
-                <span>node_modules</span>
-                <small>the installed packages</small>
-            </li>
-            <li class="file">
-                <span>package.json</span>
-                <small>programmatic description of the project</small>
-            </li>
-            <li>
-                <span>README.md</span>
-                <small>description of the project</small>
-            </li>
-        </ul>
-    </section>
-    <section>
-        <h3>Preprocessor</h3>
-        <p>SASS</p>
-    </section>
-    <section>
-        <h3>Naming convention</h3>
-        <p><b>BEM <small>(Block__Element--Modifier)</small></b></p>
-        <ul>
-            <li>
-                <span>btnConfirm</span>
-                <ul>
-                    <li>
-                        <span>btnConfirm__icon</span>
-                    </li>
-                    <li>
-                        <span>btnConfirm__caption</span>
-                    </li>
-                </ul>
-            </li>
-        </ul>
-    </section>
+    ${require('./_indentation.html')}
+    ${require('./_units.html')}
+    ${require('./_fileStructure.html')}
+    ${require('./_preprocessor.html')}
+    ${require('./_namingConvention.html')}
 </section>

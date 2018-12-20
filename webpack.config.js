@@ -1,7 +1,6 @@
 const path = require('path');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const HtmlWebpackPartialsPlugin = require('html-webpack-partials-plugin');
 const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const globImporter = require('node-sass-glob-importer');
@@ -64,7 +63,10 @@ module.exports = {
         test: /\_.*\.html$/,
         include: [path.resolve(__dirname, 'src/partials')],
         use: [{
-          loader:  'html-loader'
+          loader:  'html-loader',
+          options: {
+            interpolate: true
+          }
         }]
       },
 
