@@ -1,10 +1,12 @@
 .section-components {
     .component {
+        $bgColor: #f5f2f0;
+        $border: 1px solid rgba(0,0,0,0.5);
+
         margin-top: 1em;
         margin-bottom: 1em;
-        $border: 1px solid rgba(0,0,0,0.5);
         border: $border;
-        background: #f5f2f0;
+        background-color: $bgColor;
         nav {
             display: flex;
             ul {
@@ -25,6 +27,11 @@
                         display: block;
                         padding: 1em 1em 0.3em 1em;
                         text-align: center;
+                        transition: background-color 300ms;
+                        background-color: $bgColor;
+                    }
+                    a:hover {
+                        background-color: #FFFFFF;
                     }
                     &:not(:nth-child(1)) a {
                         border-left: $border;
@@ -34,7 +41,10 @@
         }
         &.show-example, &:not(.show-html):not(.show-css) {
             nav ul li a[data-value="example"] {
-                background: #CBC5C1;
+                background-color: #CBC5C1;
+            }
+            nav ul li a[data-value="example"]:hover {
+                background-color: #FFFFFF;
             }
             .component-preview > *:nth-child(1) {
                 display: block;
@@ -43,7 +53,10 @@
     
         &.show-html {
             nav ul li a[data-value="html"] {
-                background: #CBC5C1;
+                background-color: #CBC5C1;
+            }
+            nav ul li a[data-value="html"]:hover {
+                background-color: #FFFFFF;
             }
             .component-preview > *:nth-child(2) {
                 display: block;
@@ -51,7 +64,10 @@
         }
         &.show-css {
             nav ul li a[data-value="css"] {
-                background: #CBC5C1;
+                background-color: #CBC5C1;
+            }
+            nav ul li a[data-value="css"]:hover {
+                background-color: #FFFFFF;
             }
             .component-preview > *:nth-child(3) {
                 display:block;
