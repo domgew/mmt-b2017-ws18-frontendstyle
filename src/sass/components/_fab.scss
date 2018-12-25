@@ -1,16 +1,3 @@
-<section>
-    <h4>Floating Action Button</h4>
-    <div class="component">
-        <div class="component-preview">
-            <div class="example">
-                <button class="fab">add</button>
-            </div>
-            <pre><code class="language-html">
-&lt;button class=&quot;fab&quot;&gt;
-    add
-&lt;/button&gt;
-            </code></pre>
-            <pre><code class="language-css">
 button.fab {
     width: 4rem;
     height: 4rem;
@@ -36,8 +23,3 @@ button.fab:hover {
     background-position: center, center;
     box-shadow: 0 0.94488rem 1.1811rem #0000001E; //4mm 5mm
 }
-            </code></pre>
-        </div>
-    </div>
-    ${require('./_fab_explanation.html')}
-</section>

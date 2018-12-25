@@ -80,7 +80,8 @@
                 padding: 1em;
                 overflow: auto;
                 text-shadow: 0 1px white;
-                @import "components/*";
+                // @import "components/*";
+                @import "components/index";
             }
         
             & > * {
