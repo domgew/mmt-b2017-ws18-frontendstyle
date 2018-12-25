@@ -12,6 +12,8 @@ button {
     will-change: background-image, box-shadow;
     transition-property: background-image, box-shadow;
     transition-duration: 300ms;
+
+    cursor: pointer;
 }
 button:hover {
     background: linear-gradient(0.25turn, $primary, #825594);

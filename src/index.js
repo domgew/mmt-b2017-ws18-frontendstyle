@@ -21,7 +21,7 @@ import 'prismjs/themes/prism.css'
     tabExample.setAttribute('data-value','example');
     tabHTML.appendChild(document.createTextNode('HTML'));
     tabHTML.setAttribute('data-value','html');
-    tabCSS.appendChild(document.createTextNode('CSS'));
+    tabCSS.appendChild(document.createTextNode('SASS'));
     tabCSS.setAttribute('data-value','css');
     //event listeners for tabs
     tabExample.addEventListener('click',(e)=>{
