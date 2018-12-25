@@ -1,5 +1,9 @@
 @import "../../../node_modules/reset-css/sass/reset";
 
+$primary: #8E2462;
+$success: #14c3a2;
+$danger: #b61c62;
+
 *, *:after, *:before {
     box-sizing: border-box;
     padding:0;
@@ -13,3 +17,4 @@ html {
 @import "button_reset";
 @import "button";
 @import "fab";
+@import "iconButton";

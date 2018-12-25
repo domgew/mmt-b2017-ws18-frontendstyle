@@ -2,7 +2,7 @@ button {
     padding: 0.5em 4em;
     border-radius: 0.28346rem; //1.2mm
 
-    background-image: linear-gradient(0.25turn, #825594, #8E2462);
+    background-image: linear-gradient(0.25turn, #825594, $primary);
     box-shadow: 0 0.47244rem 0.70866rem #0000001E; //2mm 3mm
     color: white;
 
@@ -14,6 +14,6 @@ button {
     transition-duration: 300ms;
 }
 button:hover {
-    background: linear-gradient(0.25turn, #8E2462, #825594);
+    background: linear-gradient(0.25turn, $primary, #825594);
     box-shadow: 0 0.94488rem 1.1811rem #0000001E; //4mm 5mm
 }

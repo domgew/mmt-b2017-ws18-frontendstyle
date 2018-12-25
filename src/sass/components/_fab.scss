@@ -5,8 +5,8 @@ button.fab {
     font-family: Assistant;
     font-size: 0;
 
-    background-image: url(../images/x.svg), linear-gradient(0.25turn, #825594, #8E2462);
-    background-size: 1.5rem 1.5rem, 100% 100%;
+    background-image: url(../images/plus.svg), linear-gradient(0.25turn, #825594, $primary);
+    background-size: 1.8rem 1.8rem, 100% 100%;
     background-repeat: no-repeat, no-repeat;
     background-position: center, center;
     box-shadow: 0 0.47244rem 0.70866rem #0000001E; //2mm 3mm
@@ -17,9 +17,6 @@ button.fab {
     transition-duration: 300ms;
 }
 button.fab:hover {
-    background-image: url(../images/x.svg), linear-gradient(0.25turn, #8E2462, #825594);
-    background-size: 1.5rem 1.5rem, 100% 100%;
-    background-repeat: no-repeat, no-repeat;
-    background-position: center, center;
+    background-image: url(../images/plus.svg), linear-gradient(0.25turn, $primary, #825594);
     box-shadow: 0 0.94488rem 1.1811rem #0000001E; //4mm 5mm
 }
