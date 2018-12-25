@@ -1,3 +1,86 @@
 <section>
     <h4>Person List</h4>
+    <div class="component">
+        <div class="component-preview">
+            <div class="example">
+                <ul class="person-list">
+                    <li>
+                        <a href="#">
+                            <span class="circle-icon">A</span>
+                            <strong>Andrew Smith</strong>
+                            <span class="amount positive">30,00€</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <pre><code class="language-html">
+&lt;ul class=&quot;person-list&quot;&gt;
+    &lt;li&gt;
+        &lt;a href=&quot;#&quot;&gt;
+            &lt;span class=&quot;circle-icon&quot;&gt;
+                A
+            &lt;/span&gt;
+            &lt;strong&gt;
+                Andrew Smith
+            &lt;/strong&gt;
+            &lt;span class=&quot;amount positive&quot;&gt;
+                30,00€
+            &lt;/span&gt;
+        &lt;/a&gt;
+    &lt;/li&gt;
+&lt;/ul&gt;
+            </code></pre>
+            <pre><code class="language-css">
+ul.person-list {
+    list-style:none;
+
+    li {
+        background-color: $secondary;
+        border-radius: 0.28346rem;
+
+        &:hover {
+            box-shadow: 0.2rem 0.2rem 0.5rem rgba(255,255,255,0.1);
+        }
+
+        a {
+            display: block;
+            color: $white;
+            padding: 0.5rem;
+            position: relative;
+            text-decoration: none;
+
+            strong, .amount {
+                font-size: 1.6rem;
+            }
+    
+            strong {
+                margin-left: 0.5rem;
+                margin-right: 0.5rem;
+                text-overflow: ellipsis;
+                font-weight: 300;
+                font-family: 'Assistant';
+            }
+    
+            .amount {
+                font-family: 'Heebo';
+                font-weight: 300;
+                position: absolute;
+                right: 0.5rem;
+                top: 50%;
+                transform: translate(0, -50%);
+    
+                &.positive {
+                    color: $success;
+                }
+                &.negative {
+                    color: $danger;
+                }
+            }
+        }
+    }
+}
+            </code></pre>
+        </div>
+    </div>
+    ${require('./_personList_explanation.html')}
 </section>

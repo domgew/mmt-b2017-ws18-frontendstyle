@@ -1,0 +1,48 @@
+ul.person-list {
+    list-style:none;
+
+    li {
+        background-color: $secondary;
+        border-radius: 0.28346rem;
+
+        &:hover {
+            box-shadow: 0.2rem 0.2rem 0.5rem rgba(255,255,255,0.1);
+        }
+
+        a {
+            display: block;
+            color: $white;
+            padding: 0.5rem;
+            position: relative;
+            text-decoration: none;
+
+            strong, .amount {
+                font-size: 1.6rem;
+            }
+    
+            strong {
+                margin-left: 0.5rem;
+                margin-right: 0.5rem;
+                text-overflow: ellipsis;
+                font-weight: 300;
+                font-family: 'Assistant';
+            }
+    
+            .amount {
+                font-family: 'Heebo';
+                font-weight: 300;
+                position: absolute;
+                right: 0.5rem;
+                top: 50%;
+                transform: translate(0, -50%);
+    
+                &.positive {
+                    color: $success;
+                }
+                &.negative {
+                    color: $danger;
+                }
+            }
+        }
+    }
+}
