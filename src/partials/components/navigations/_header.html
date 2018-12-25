@@ -1,3 +1,111 @@
 <section>
     <h4>Header Navigation</h4>
 </section>
+<section>
+    <h4>Header Navigation</h4>
+    <div class="component">
+        <div class="component-preview">
+            <div class="example">
+                <header>
+                    <a href="#">
+                        <img src="${require('../../../images/logo_white.svg')}" alt="debtrack">
+                    </a>
+                    <button class="help">
+                        help
+                    </button>
+                </header>
+                <header>
+                    <button class="back">
+                        back
+                    </button>
+                    <a href="#">
+                        <img src="${require('../../../images/logo_white.svg')}" alt="debtrack">
+                    </a>
+                    <button class="help">
+                        help
+                    </button>
+                </header>
+            </div>
+            <pre><code class="language-html">
+&lt;header&gt;
+    &lt;a href=&quot;#&quot;&gt;
+        &lt;img src=&quot;${require('../../../images/logo_white.svg')}&quot; alt=&quot;debtrack&quot;&gt;
+    &lt;/a&gt;
+    &lt;button class=&quot;help&quot;&gt;
+        help
+    &lt;/button&gt;
+&lt;/header&gt;
+&lt;header&gt;
+    &lt;button class=&quot;back&quot;&gt;
+        back
+    &lt;/button&gt;
+    &lt;a href=&quot;#&quot;&gt;
+        &lt;img src=&quot;${require('../../../images/logo_white.svg')}&quot; alt=&quot;debtrack&quot;&gt;
+    &lt;/a&gt;
+    &lt;button class=&quot;help&quot;&gt;
+        help
+    &lt;/button&gt;
+&lt;/header&gt;
+            </code></pre>
+            <pre><code class="language-css">
+header {
+    display: block;
+    position: relative;
+    height: 3rem;
+
+    a {
+        display: block;
+        position: absolute;
+        top: 0rem;
+        left: 50%;
+        transform: translate(-50%,0);
+        text-align: center;
+        img {
+            width: 50%;
+            height: 3rem;
+        }
+
+        &:hover {
+            box-shadow: 0 0 1rem rgba(255,255,255,0.3);
+        }
+    }
+    button {
+        display: block;
+        height: 2.5rem;
+        width: 2.5rem;
+        padding: 0;
+        font-size:0;
+        background-color: transparent;
+        background-image: none;
+        background-size: 2rem 2rem;
+        background-repeat: no-repeat;
+        background-position: center;
+        box-shadow: none;
+        border-radius: 50%;
+        position: absolute;
+        top: 0.25rem;
+
+        &:hover {
+            box-shadow: 0 0 1rem rgba(255,255,255,0.3);
+            background-position: center;
+        }
+
+        &.back {
+            background-image: url(../images/backpfeil.svg);
+            background-repeat: no-repeat;
+            background-size: 2rem 2rem;
+            left: 1rem;
+        }
+        &.help {
+            background-image: url(../images/help.svg);
+            background-repeat: no-repeat;
+            background-size: 2rem 2rem;
+            right: 1rem;
+        }
+    }
+}
+            </code></pre>
+        </div>
+    </div>
+    ${require('./_header_explanation.html')}
+</section>

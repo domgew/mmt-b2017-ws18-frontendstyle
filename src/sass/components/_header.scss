@@ -1,0 +1,56 @@
+header {
+    display: block;
+    position: relative;
+    height: 3rem;
+
+    a {
+        display: block;
+        position: absolute;
+        top: 0rem;
+        left: 50%;
+        transform: translate(-50%,0);
+        text-align: center;
+        img {
+            width: 50%;
+            height: 3rem;
+        }
+
+        &:hover {
+            box-shadow: 0 0 1rem rgba(255,255,255,0.3);
+        }
+    }
+    button {
+        display: block;
+        height: 2.5rem;
+        width: 2.5rem;
+        padding: 0;
+        font-size:0;
+        background-color: transparent;
+        background-image: none;
+        background-size: 2rem 2rem;
+        background-repeat: no-repeat;
+        background-position: center;
+        box-shadow: none;
+        border-radius: 50%;
+        position: absolute;
+        top: 0.25rem;
+
+        &:hover {
+            box-shadow: 0 0 1rem rgba(255,255,255,0.3);
+            background-position: center;
+        }
+
+        &.back {
+            background-image: url(../images/backpfeil.svg);
+            background-repeat: no-repeat;
+            background-size: 2rem 2rem;
+            left: 1rem;
+        }
+        &.help {
+            background-image: url(../images/help.svg);
+            background-repeat: no-repeat;
+            background-size: 2rem 2rem;
+            right: 1rem;
+        }
+    }
+}
