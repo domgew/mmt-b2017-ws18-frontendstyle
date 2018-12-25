@@ -3,20 +3,32 @@
     <div class="component">
         <div class="component-preview">
             <div class="example">
-                <button>Button Text</button>
+                <button>send a reminder</button>
             </div>
             <pre><code class="language-html">
 &lt;button&gt;
-    Button Text
+    send a reminder
 &lt;/button&gt;
             </code></pre>
             <pre><code class="language-css">
 button {
-    padding: 1em;
-    background-color: red;
+    padding: 0.5em 4em;
+    border-radius: 0.28346rem;
+
+    background-image: linear-gradient(0.25turn, #825594, #8E2462);
+    box-shadow: 0 0.47244rem 0.70866rem #0000001E;
+    color: white;
+
+    font-family: Assistant;
+    font-size: 1.5rem;
+
+    will-change: background-image, box-shadow;
+    transition-property: background-image, box-shadow;
+    transition-duration: 300ms;
 }
 button:hover {
-    background-color: yellow;
+    background: linear-gradient(0.25turn, #8E2462, #825594);
+    box-shadow: 0 0.94488rem 1.1811rem #0000001E;
 }
             </code></pre>
         </div>
