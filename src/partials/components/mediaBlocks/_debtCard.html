@@ -1,0 +1,145 @@
+<section>
+    <h4>Debt Card</h4>
+    <div class="component">
+        <div class="component-preview">
+            <div class="example">
+                <article class="debt-card">
+                    <section>
+                        <h2>Andrew Smith ows you</h2>
+                        <span class="amount positive"><span>+</span>€12,50</span>
+                        <h3>Halloweenparty drinks and snacks</h3>
+                    </section>
+                    <section>
+                        <button class="icon success" data-text="paid">paid</button>
+                        <button class="icon danger" data-text="delete">delete</button>
+                    </section>
+                </article>
+                <article class="debt-card">
+                    <section>
+                        <h2>You owe to Andrew Smith</h2>
+                        <span class="amount negative"><span>-</span>€12,50</span>
+                        <h3>Halloweenparty drinks and snacks</h3>
+                    </section>
+                    <section>
+                        <button class="icon success" data-text="paid">paid</button>
+                        <button class="icon danger" data-text="delete">delete</button>
+                    </section>
+                </article>
+            </div>
+            <pre><code class="language-html">
+&lt;article class=&quot;debt-card&quot;&gt;
+    &lt;section&gt;
+        &lt;h2&gt;
+            Andrew Smith ows you
+        &lt;/h2&gt;
+        &lt;span class=&quot;amount positive&quot;&gt;
+            &lt;span&gt;
+                +
+            &lt;/span&gt;
+            €12,50
+        &lt;/span&gt;
+        &lt;h3&gt;
+            Halloweenparty drinks and snacks
+        &lt;/h3&gt;
+    &lt;/section&gt;
+    &lt;section&gt;
+        &lt;button class=&quot;icon success&quot; data-text=&quot;paid&quot;&gt;
+            paid
+        &lt;/button&gt;
+        &lt;button class=&quot;icon danger&quot; data-text=&quot;delete&quot;&gt;
+            delete
+        &lt;/button&gt;
+    &lt;/section&gt;
+&lt;/article&gt;
+&lt;article class=&quot;debt-card&quot;&gt;
+    &lt;section&gt;
+        &lt;h2&gt;
+            You owe to Andrew Smith
+        &lt;/h2&gt;
+        &lt;span class=&quot;amount negative&quot;&gt;
+            &lt;span&gt;
+                -
+            &lt;/span&gt;
+            €12,50
+        &lt;/span&gt;
+        &lt;h3&gt;
+            Halloweenparty drinks and snacks
+        &lt;/h3&gt;
+    &lt;/section&gt;
+    &lt;section&gt;
+        &lt;button class=&quot;icon success&quot; data-text=&quot;paid&quot;&gt;
+            paid
+        &lt;/button&gt;
+        &lt;button class=&quot;icon danger&quot; data-text=&quot;delete&quot;&gt;
+            delete
+        &lt;/button&gt;
+    &lt;/section&gt;
+&lt;/article&gt;
+            </code></pre>
+            <pre><code class="language-css">
+article.debt-card {
+    background-color: $secondary;
+    border-radius: 0.28346rem;
+    padding: 0 0 0 1.2rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: stretch;
+    align-items: stretch;
+    font-family: 'Assistant';
+    font-weight: 300;
+    color: white;
+    margin-bottom: 1rem;
+
+    section:nth-of-type(1) {
+        flex-grow: 1;
+        flex-shrink: 1;
+        width: 100%;
+        padding: 1rem 0.5rem 1rem 0;
+
+        h2 {
+            font-size: 1.3rem;
+        }
+        .amount {
+            font-family: 'Heebo';
+            font-weight: 300;
+            font-size: 4.5rem;
+
+            &.positive {
+                color: $success;
+            }
+            &.negative {
+                color: $danger;
+            }
+
+            span {
+                visibility: hidden;
+                display: inline-block;
+                width: 0;
+            }
+        }
+        h3 {
+            font-size: 1.8rem;
+        }
+    }
+    section:nth-of-type(2) {
+        flex-grow: 0;
+        flex-shrink: 0;
+        width: 6rem;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        min-height: 12rem;
+        border-left: 1px solid $white;
+        padding: 0 1rem;
+
+        button:nth-last-of-type(1) {
+            margin-top: 0.8rem;
+        }
+    }
+}
+            </code></pre>
+        </div>
+    </div>
+    ${require('./_debtCard_explanation.html')}
+</section>
