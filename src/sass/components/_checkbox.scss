@@ -4,6 +4,8 @@
     justify-content: flex-start;
     align-items: center;
     align-content: center;
+    width: 100%;
+    max-width: $maxWidth;
 
     input[type="checkbox"] {
         -webkit-appearance: none;

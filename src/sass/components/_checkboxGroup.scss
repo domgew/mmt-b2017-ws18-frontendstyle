@@ -1,4 +1,6 @@
 fieldset.checkbox-group {
+    width: 100%;
+    max-width: $maxWidth;
     legend {
         background: none;
         color: $white;

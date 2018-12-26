@@ -21,7 +21,9 @@ input[type="number"] {
     padding: 0.7rem 1.5rem;
     color: $white;
     width: 100%;
+    width: calc(100% - 2.5rem);
     max-width: $maxWidth;
+    max-width: calc(#{$maxWidth} - 2.5rem);
     border-radius: 0.28346rem;
 
     transition-property: background-color;
@@ -40,5 +42,19 @@ input[type="number"] {
     }
     &::placeholder {
         color: darken($white, 30%);
+    }
+
+    & + span {
+        display: inline-block;
+
+        font-family: 'Assistant';
+        font-weight: 600;
+        font-size: 3rem;
+        height: 4rem;
+        line-height: 4rem;
+        vertical-align: middle;
+
+        color: $white;
+        margin: -0.4rem 0 0 0.5rem;
     }
 }
