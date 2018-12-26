@@ -7,6 +7,8 @@ $white: #FFFFFF;
 $success: #14c3a2;
 $danger: #b61c62;
 
+$maxWidth: 600px;
+
 *, *:after, *:before {
     box-sizing: border-box;
     padding:0;
@@ -27,6 +29,7 @@ body, & {
 @import "fab";
 @import "iconButton";
 @import "circleIcon";
+@import "textField";
 @import "personList";
 @import "debtCard";
 @import "header";

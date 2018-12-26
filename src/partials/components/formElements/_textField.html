@@ -1,3 +1,54 @@
 <section>
     <h4>Text Field</h4>
+    <div class="component">
+        <div class="component-preview">
+            <div class="example">
+                <label for="text_subject">subject</label>
+                <input type="text" name="subject" id="text_subject" placeholder="Subject ...">
+            </div>
+            <pre><code class="language-html">
+&lt;label for=&quot;text_subject&quot;&gt;
+    subject
+&lt;/label&gt;
+&lt;input type=&quot;text&quot; name=&quot;subject&quot; id=&quot;text_subject&quot; placeholder=&quot;Subject ...&quot;&gt;
+            </code></pre>
+            <pre><code class="language-css">
+label {
+    color: $white;
+    font-family: 'Assistant';
+    font-weight: 600;
+    font-size: 1.3rem;
+    display: block;
+    padding: 0.5rem 0.7rem;
+
+    & + input[type=&quot;text&quot;] {
+        margin-top: -0.3rem;
+    }
+}
+input[type=&quot;text&quot;] {
+    background-color: $secondary;
+    border: 0;
+    font-family: 'Assistant';
+    font-weight: 300;
+    font-size: 1.5rem;
+    padding: 0.7rem 1.5rem;
+    color: $white;
+    width: 100%;
+    max-width: $maxWidth;
+    border-radius: 0.28346rem;
+
+    transition-property: background-color;
+    transition-duration: 300ms;
+
+    &:hover, &:focus {
+        background-color: darken($secondary, 10%);
+    }
+    &::placeholder {
+        color: darken($white, 30%);
+    }
+}
+            </code></pre>
+        </div>
+    </div>
+    ${require('./_textField_explanation.html')}
 </section>
