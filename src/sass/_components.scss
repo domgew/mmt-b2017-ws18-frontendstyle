@@ -1,12 +1,11 @@
 .section-components {
     .component {
-        $bgColor: #f5f2f0;
-        $border: 1px solid rgba(0,0,0,0.5);
+        // $bgColor: #f5f2f0;
+        $border: 1.5px solid #000;
 
         margin-top: 1em;
         margin-bottom: 1em;
-        border: $border;
-        background-color: $bgColor;
+        background-color: $secondary;
         nav {
             display: flex;
             ul {
@@ -25,13 +24,17 @@
                     a {
                         cursor: pointer;
                         display: block;
-                        padding: 1em 1em 0.3em 1em;
+                        padding: 1em 1em;
                         text-align: center;
                         transition: background-color 300ms;
-                        background-color: $bgColor;
+                        background-color: $secondary;
+                        color: $white;
+                        font-size: 1.1rem;
+                        font-weight: 400;
+                        letter-spacing: 0.05rem;
                     }
                     a:hover {
-                        background-color: #FFFFFF;
+                        background-color: $primary;
                     }
                     &:not(:nth-child(1)) a {
                         border-left: $border;
@@ -41,10 +44,10 @@
         }
         &.show-example, &:not(.show-html):not(.show-css) {
             nav ul li a[data-value="example"] {
-                background-color: #CBC5C1;
+                background-color: $background;
             }
             nav ul li a[data-value="example"]:hover {
-                background-color: #FFFFFF;
+                background-color: $primary;
             }
             .component-preview > *:nth-child(1) {
                 display: block;
@@ -53,10 +56,10 @@
     
         &.show-html {
             nav ul li a[data-value="html"] {
-                background-color: #CBC5C1;
+                background-color: $background;
             }
             nav ul li a[data-value="html"]:hover {
-                background-color: #FFFFFF;
+                background-color: $primary;
             }
             .component-preview > *:nth-child(2) {
                 display: block;
@@ -64,10 +67,10 @@
         }
         &.show-css {
             nav ul li a[data-value="css"] {
-                background-color: #CBC5C1;
+                background-color: $background;
             }
             nav ul li a[data-value="css"]:hover {
-                background-color: #FFFFFF;
+                background-color: $primary;
             }
             .component-preview > *:nth-child(3) {
                 display:block;
