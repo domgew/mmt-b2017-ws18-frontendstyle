@@ -18,7 +18,7 @@ button.fab {
     font-family: Assistant;
     font-size: 0;
 
-    background-image: url(../images/plus.svg), linear-gradient(0.25turn, #825594, #8E2462);
+    background-image: url(${require('../../../images/plus.svg')}), linear-gradient(0.25turn, #825594, #8E2462);
     background-size: 1.8rem 1.8rem, 100% 100%;
     background-repeat: no-repeat, no-repeat;
     background-position: center, center;
@@ -30,7 +30,7 @@ button.fab {
     transition-duration: 300ms;
 }
 button.fab:hover {
-    background-image: url(../images/plus.svg), linear-gradient(0.25turn, #8E2462, #825594);
+    background-image: url(${require('../../../images/plus.svg')}), linear-gradient(0.25turn, #8E2462, #825594);
     box-shadow: 0 0.94488rem 1.1811rem #0000001E;
 }
             </code></pre>

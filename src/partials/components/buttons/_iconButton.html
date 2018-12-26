@@ -24,11 +24,11 @@ button.icon {
     position: relative;
 
     background-color: $primary;
-    background-image: url(../images/plus.svg);
+    background-image: url(${require('../../../images/plus.svg')});
     background-size: 1.8rem 1.8rem;
     background-repeat: no-repeat;
     background-position: center;
-    box-shadow: 0 0.47244rem 0.70866rem #0000001E; //2mm 3mm
+    box-shadow: 0 0.47244rem 0.70866rem #0000001E;
     color: white;
 
     will-change: background-color, box-shadow;
@@ -50,7 +50,7 @@ button.icon {
 
     &.success {
         background-color: $success;
-        background-image: url(../images/hacken.svg);
+        background-image: url(${require('../../../images/hacken.svg')});
 
         &:hover {
             background-color: darken($success, 5%);
@@ -58,7 +58,7 @@ button.icon {
     }
     &.danger {
         background-color: $danger;
-        background-image: url(../images/x.svg);
+        background-image: url(${require('../../../images/x.svg')});
 
         &:hover {
             background-color: darken($danger, 5%);
@@ -66,7 +66,7 @@ button.icon {
     }
 }
 button.icon:hover {
-    box-shadow: 0 0.94488rem 1.1811rem #0000001E; //4mm 5mm
+    box-shadow: 0 0.94488rem 1.1811rem #0000001E;
     background-color: darken($primary, 5%);
 }
             </code></pre>

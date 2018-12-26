@@ -40,16 +40,20 @@ header {
             background-position: center;
         }
 
-        &.back {
-            background-image: url(../images/backpfeil.svg);
+        &.back, &.help, &.close {
             background-repeat: no-repeat;
             background-size: 2rem 2rem;
+        }
+        &.back {
+            background-image: url(../images/backpfeil.svg);
             left: 1rem;
         }
         &.help {
             background-image: url(../images/help.svg);
-            background-repeat: no-repeat;
-            background-size: 2rem 2rem;
+            right: 1rem;
+        }
+        &.close {
+            background-image: url(../images/close.svg);
             right: 1rem;
         }
     }
