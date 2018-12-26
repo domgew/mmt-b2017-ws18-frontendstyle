@@ -3,38 +3,73 @@
     <div class="component">
         <div class="component-preview">
             <div class="example">
-                <label for="text_name">name</label>
-                <fieldset>
-                    <input list="list_text_name" type="text" name="name" id="text_name" placeholder="Name ...">
+                <label for="text_name2">name</label>
+                <div class="addable-combo">
+                    <input list="list_text_name2" type="text" name="name2" id="text_name2" placeholder="Name ...">
                     <button>add another one</button>
-                    <datalist id="list_text_name">
+                    <datalist id="list_text_name2">
                         <option value="Andrew Smith">
                         <option value="Sophie">
                     </datalist>
-                </fieldset>
+                </div>
             </div>
             <pre><code class="language-html">
-&lt;label for=&quot;text_name&quot;&gt;
+&lt;label for=&quot;text_name2&quot;&gt;
     name
 &lt;/label&gt;
-&lt;input list=&quot;list_text_name&quot; type=&quot;text&quot; name=&quot;name&quot; id=&quot;text_name&quot; placeholder=&quot;Name ...&quot;&gt;
-&lt;datalist id=&quot;list_text_name&quot;&gt;
-    &lt;option value=&quot;Andrew Smith&quot;&gt;
-    &lt;option value=&quot;Sophie&quot;&gt;
-&lt;/datalist&gt;
+&lt;div class=&quot;addable-combo&quot;&gt;
+    &lt;input list=&quot;list_text_name2&quot; type=&quot;text&quot; name=&quot;name2&quot; id=&quot;text_name2&quot; placeholder=&quot;Name ...&quot;&gt;
+    &lt;button&gt;
+        add another one
+    &lt;/button&gt;
+    &lt;datalist id=&quot;list_text_name2&quot;&gt;
+        &lt;option value=&quot;Andrew Smith&quot;&gt;
+        &lt;option value=&quot;Sophie&quot;&gt;
+    &lt;/datalist&gt;
+&lt;/div&gt;
             </code></pre>
             <pre><code class="language-css">
-input[type=&quot;text&quot;][list] {
+label + .addable-combo {
+    margin-top: -0.3rem;
+}
+.addable-combo {
+    display: flex;
+    flex-direction: row;
+    justify-content: stretch;
+    align-items: center;
+    flex-wrap: nowrap;
+    max-width: $maxWidth;
 
-    &::-webkit-calendar-picker-indicator {
-        display: inline-block;
-        color: $white;
-        background-color: transparent;
-        border-radius: 0.28346rem;
+    input[type=&quot;text&quot;] {
+        margin-top: 0;
+        flex-grow: 1;
+        flex-shrink: 1;
+        width: 100%;
+        max-width: unset;
+    }
+    input[type=&quot;text&quot;] + button {
+        max-width: unset;
+        font-size: 0;
+        width: 2rem;
+        height: 2rem;
+        border-radius: 50%;
+        background-image: url(${require('../../../images/add.svg')});
+        background-color: rgba($white,0);
+        flex-shrink: 0;
+        flex-grow: 0;
+        margin-left: 0.5rem;
+        transition-property: background-color;
+        transition-duration: 300ms;
 
         &:hover {
-            background-color: $secondary;
+            background-color: rgba($white, 0.05);
         }
+    }
+    input[type=&quot;text&quot;] + button + datalist {
+        width: 0;
+        height: 0;
+        flex-grow: 0;
+        flex-shrink: 0;
     }
 }
             </code></pre>

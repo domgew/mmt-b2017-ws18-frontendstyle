@@ -1,6 +1,6 @@
 input[type="text"][list] {
     
-    &::-webkit-calendar-picker-indicator {
+    &::-webkit-calendar-picker-indicator, &::-webkit-list-button {
         display: inline-block;
         color: $white;
         background-color: transparent;

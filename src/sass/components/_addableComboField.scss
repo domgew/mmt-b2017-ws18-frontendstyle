@@ -1,0 +1,43 @@
+label + .addable-combo {
+    margin-top: -0.3rem;
+}
+.addable-combo {
+    display: flex;
+    flex-direction: row;
+    justify-content: stretch;
+    align-items: center;
+    flex-wrap: nowrap;
+    max-width: $maxWidth;
+
+    input[type="text"] {
+        margin-top: 0;
+        flex-grow: 1;
+        flex-shrink: 1;
+        width: 100%;
+        max-width: unset;
+    }
+    input[type="text"] + button {
+        max-width: unset;
+        font-size: 0;
+        width: 2rem;
+        height: 2rem;
+        border-radius: 50%;
+        background-image: url(../images/add.svg);
+        background-color: rgba($white,0);
+        flex-shrink: 0;
+        flex-grow: 0;
+        margin-left: 0.5rem;
+        transition-property: background-color;
+        transition-duration: 300ms;
+
+        &:hover {
+            background-color: rgba($white, 0.05);
+        }
+    }
+    input[type="text"] + button + datalist {
+        width: 0;
+        height: 0;
+        flex-grow: 0;
+        flex-shrink: 0;
+    }
+}
