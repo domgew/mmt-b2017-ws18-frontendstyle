@@ -1,0 +1,94 @@
+<section>
+    <h4>Checkbox Group</h4>
+    <div class="component">
+        <div class="component-preview">
+            <div class="example">
+                <fieldset class="checkbox-group">
+                    <legend>debts</legend>
+                    <ul>
+                        <li class="checkbox-item">
+                            <input type="checkbox" name="debt[0]" value="1" id="check_debt[0]">
+                            <label for="check_debt[0]">Pizza</label>
+                        </li>
+                        <li class="checkbox-item">
+                            <input type="checkbox" name="debt[1]" value="1" id="check_debt[1]">
+                            <label for="check_debt[1]">Cinema Popcorn and snacks</label>
+                        </li>
+                        <li class="checkbox-item">
+                            <input type="checkbox" name="debt[2]" value="1" id="check_debt[2]">
+                            <label for="check_debt[2]">Birthday gift for Lena</label>
+                        </li>
+                        <li class="checkbox-item">
+                            <input type="checkbox" name="debt[3]" value="1" id="check_debt[3]">
+                            <label for="check_debt[3]">Halloweenparty drinks and snacks</label>
+                        </li>
+                    </ul>
+                </fieldset>
+            </div>
+            <pre><code class="language-html">
+&lt;fieldset class=&quot;checkbox-group&quot;&gt;
+    &lt;legend&gt;
+        debts
+    &lt;/legend&gt;
+    &lt;ul&gt;
+        &lt;li class=&quot;checkbox-item&quot;&gt;
+            &lt;input type=&quot;checkbox&quot; name=&quot;debt[0]&quot; value=&quot;1&quot; id=&quot;check_debt[0]&quot;&gt;
+            &lt;label for=&quot;check_debt[0]&quot;&gt;
+                Pizza
+            &lt;/label&gt;
+        &lt;/li&gt;
+        &lt;li class=&quot;checkbox-item&quot;&gt;
+            &lt;input type=&quot;checkbox&quot; name=&quot;debt[1]&quot; value=&quot;1&quot; id=&quot;check_debt[1]&quot;&gt;
+            &lt;label for=&quot;check_debt[1]&quot;&gt;
+                Cinema Popcorn and snacks
+            &lt;/label&gt;
+        &lt;/li&gt;
+        &lt;li class=&quot;checkbox-item&quot;&gt;
+            &lt;input type=&quot;checkbox&quot; name=&quot;debt[2]&quot; value=&quot;1&quot; id=&quot;check_debt[2]&quot;&gt;
+            &lt;label for=&quot;check_debt[2]&quot;&gt;
+                Birthday gift for Lena
+            &lt;/label&gt;
+        &lt;/li&gt;
+        &lt;li class=&quot;checkbox-item&quot;&gt;
+            &lt;input type=&quot;checkbox&quot; name=&quot;debt[3]&quot; value=&quot;1&quot; id=&quot;check_debt[3]&quot;&gt;
+            &lt;label for=&quot;check_debt[3]&quot;&gt;
+                Halloweenparty drinks and snacks
+            &lt;/label&gt;
+        &lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/fieldset&gt;
+            </code></pre>
+            <pre><code class="language-css">
+fieldset.checkbox-group {
+    legend {
+        background: none;
+        color: $white;
+        font-family: 'Assistant';
+        font-weight: 600;
+        font-size: 1.3rem;
+        padding: 0.5rem 0.7rem;
+        width: 100%;
+        max-width: $maxWidth;
+    }
+    legend + ul {
+        background-color: $secondary;
+        padding: 1rem;
+        border-radius: 0.28346rem;
+        margin-top: -0.3rem;
+
+        li.checkbox-item {
+            input[type=&quot;checkbox&quot;] {
+                background-color: $background;
+            }
+
+            &:not(:nth-last-of-type(1)) {
+                margin-bottom: 0.5rem;
+            }
+        }
+    }
+}
+            </code></pre>
+        </div>
+    </div>
+    ${require('./_checkboxGroup_explanation.html')}
+</section>

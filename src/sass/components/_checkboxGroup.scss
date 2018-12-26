@@ -1,0 +1,28 @@
+fieldset.checkbox-group {
+    legend {
+        background: none;
+        color: $white;
+        font-family: 'Assistant';
+        font-weight: 600;
+        font-size: 1.3rem;
+        padding: 0.5rem 0.7rem;
+        width: 100%;
+        max-width: $maxWidth;
+    }
+    legend + ul {
+        background-color: $secondary;
+        padding: 1rem;
+        border-radius: 0.28346rem;
+        margin-top: -0.3rem;
+
+        li.checkbox-item {
+            input[type="checkbox"] {
+                background-color: $background;
+            }
+
+            &:not(:nth-last-of-type(1)) {
+                margin-bottom: 0.5rem;
+            }
+        }
+    }
+}
