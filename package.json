@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack --mode production",
-    "start": "webpack-dev-server --watch-poll --mode=development"
+    "start": "webpack-dev-server --watch-poll --mode=development",
+    "start:dom": "webpack-dev-server --watch-poll --mode=development --host=192.168.0.14"
   },
   "keywords": [],
   "author": "",
