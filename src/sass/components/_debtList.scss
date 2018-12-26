@@ -6,8 +6,8 @@ ul.debt-list {
     flex-wrap: wrap;
 
     li {
-        flex: 1 1 calc(50% - 1rem);
-        max-width: calc(50% - 1rem);
+        flex: 1 1 calc(50% - 0.5rem);
+        max-width: calc(50% - 0.5rem);
         display: block;
         background-color: $secondary;
         border-radius: 0.28346rem;

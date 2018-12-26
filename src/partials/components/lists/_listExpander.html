@@ -1,0 +1,167 @@
+<!--https://www.w3.org/TR/wai-aria-practices/examples/accordion/accordion.html-->
+<section>
+    <h4>List Expander</h4>
+    <div class="component">
+        <div class="component-preview">
+            <div class="example">
+                <dl class="list-expander" role="presentation">
+                    <dt role="heading" aria-level="3" data-expanded="false">
+                        <button aria-expanded="false" aria-controls="already-paid-list" id="btn-already-paid">already paid</button>
+                    </dt>
+                    <dd id="list-already-paid" aria-labelledby="btn-already-paid" role="region">
+                        <ul class="debt-list">
+                            <li>
+                                <span class="amount positive">
+                                    <span>+</span>€10,00
+                                </span>
+                                <span>Pizza</span>
+                            </li>
+                            <li>
+                                <span class="amount positive">
+                                    <span>+</span>€25,00
+                                </span>
+                                <span>Cinema Popcorn and snacks</span>
+                            </li>
+                        </ul>
+                    </dd>
+                </dl>
+                <dl class="list-expander" role="presentation">
+                    <dt role="heading" aria-level="3" data-expanded="true">
+                        <button aria-expanded="true" aria-controls="already-paid-list2" id="btn-already-paid2">already paid</button>
+                    </dt>
+                    <dd id="list-already-paid2" aria-labelledby="btn-already-paid2" role="region">
+                        <ul class="debt-list">
+                            <li>
+                                <span class="amount positive">
+                                    <span>+</span>€10,00
+                                </span>
+                                <span>Pizza</span>
+                            </li>
+                            <li>
+                                <span class="amount positive">
+                                    <span>+</span>€25,00
+                                </span>
+                                <span>Cinema Popcorn and snacks</span>
+                            </li>
+                        </ul>
+                    </dd>
+                </dl>
+            </div>
+            <pre><code class="language-html">
+&lt;dl class=&quot;list-expander&quot; role=&quot;presentation&quot;&gt;
+    &lt;dt role=&quot;heading&quot; aria-level=&quot;3&quot; data-expanded=&quot;false&quot;&gt;
+        &lt;button aria-expanded=&quot;false&quot; aria-controls=&quot;already-paid-list&quot; id=&quot;btn-already-paid&quot;&gt;
+            already paid
+        &lt;/button&gt;
+    &lt;/dt&gt;
+    &lt;dd id=&quot;list-already-paid&quot; aria-labelledby=&quot;btn-already-paid&quot; role=&quot;region&quot;&gt;
+        &lt;ul class=&quot;debt-list&quot;&gt;
+            &lt;li&gt;
+                &lt;span class=&quot;amount positive&quot;&gt;
+                    &lt;span&gt;
+                        +
+                    &lt;/span&gt;
+                    €10,00
+                &lt;/span&gt;
+                &lt;span&gt;
+                    Pizza
+                &lt;/span&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;span class=&quot;amount positive&quot;&gt;
+                    &lt;span&gt;
+                        +
+                    &lt;/span&gt;
+                    €25,00
+                &lt;/span&gt;
+                &lt;span&gt;
+                    Cinema Popcorn and snacks
+                &lt;/span&gt;
+            &lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/dd&gt;
+&lt;/dl&gt;
+&lt;dl class=&quot;list-expander&quot; role=&quot;presentation&quot;&gt;
+    &lt;dt role=&quot;heading&quot; aria-level=&quot;3&quot; data-expanded=&quot;true&quot;&gt;
+        &lt;button aria-expanded=&quot;true&quot; aria-controls=&quot;already-paid-list2&quot; id=&quot;btn-already-paid2&quot;&gt;
+            already paid
+        &lt;/button&gt;
+    &lt;/dt&gt;
+    &lt;dd id=&quot;list-already-paid2&quot; aria-labelledby=&quot;btn-already-paid2&quot; role=&quot;region&quot;&gt;
+        &lt;ul class=&quot;debt-list&quot;&gt;
+            &lt;li&gt;
+                &lt;span class=&quot;amount positive&quot;&gt;
+                    &lt;span&gt;
+                        +
+                    &lt;/span&gt;
+                    €10,00
+                &lt;/span&gt;
+                &lt;span&gt;
+                    Pizza
+                &lt;/span&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;span class=&quot;amount positive&quot;&gt;
+                    &lt;span&gt;
+                        +
+                    &lt;/span&gt;
+                    €25,00
+                &lt;/span&gt;
+                &lt;span&gt;
+                    Cinema Popcorn and snacks
+                &lt;/span&gt;
+            &lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/dd&gt;
+&lt;/dl&gt;
+            </code></pre>
+            <pre><code class="language-css">
+dl.list-expander {
+    dt {
+        button {
+            display: block;
+            width: 100%;
+            max-width: unset;
+
+            font-family: 'Assistant';
+            font-weight: 600;
+            font-size: 1.2rem;
+
+            background-image: unset;
+            background-position: 8rem center;
+            background-repeat: no-repeat;
+            background-size: 1rem 1rem;
+            text-align: left;
+            padding-left: 1rem;
+            background-color: rgba($secondary, 0);
+            transition-property: background-color, box-shadow;
+            transition-duration: 300ms;
+
+            &:hover {
+                background-color: rgba($secondary, 0.2);
+            }
+        }
+    }
+
+    dt[data-expanded="false"] {
+        button {
+            background-image: url(${require('../../../images/pfeil.svg')});
+        }
+        & + dd {
+            display: none;
+        }
+    }
+    dt[data-expanded="true"] {
+        button {
+            background-image: url(${require('../../../images/pfeil_inv.svg')});
+        }
+        & + dd {
+            display: block;
+        }
+    }
+}
+            </code></pre>
+        </div>
+    </div>
+    ${require('./_listExpander_explanation.html')}
+</section>

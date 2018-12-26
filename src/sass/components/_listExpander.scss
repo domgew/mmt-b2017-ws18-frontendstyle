@@ -1,0 +1,46 @@
+dl.list-expander {
+    dt {
+        button {
+            display: block;
+            width: 100%;
+            max-width: unset;
+
+            font-family: 'Assistant';
+            font-weight: 600;
+            font-size: 1.2rem;
+
+            background-image: unset;
+            background-position: 8rem center;
+            background-repeat: no-repeat;
+            background-size: 1rem 1rem;
+            text-align: left;
+            padding-left: 1rem;
+            background-color: rgba($secondary, 0);
+            transition-property: background-color, box-shadow;
+            transition-duration: 300ms;
+
+            &:hover {
+                background-color: rgba($secondary, 0.2);
+            }
+        }
+    }
+
+    dt[data-expanded="false"] {
+        button {
+            background-image: url(../images/pfeil.svg);
+        }
+        & + dd {
+            display: none;
+        }
+    }
+    dt[data-expanded="true"] {
+        button {
+            background-image: url(../images/pfeil_inv.svg);
+        }
+        & + dd {
+            display: block;
+        }
+    }
+    
+    margin-top: 1rem;
+}
