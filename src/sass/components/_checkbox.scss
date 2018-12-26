@@ -1,22 +1,3 @@
-<section>
-    <h4>Checkbox</h4>
-    <div class="component">
-        <div class="component-preview">
-            <div class="example">
-                <div class="checkbox-item">
-                    <input type="checkbox" name="include_me" value="1" id="check_include_me">
-                    <label for="check_include_me">include mysql in calculation</label>
-                </div>
-            </div>
-            <pre><code class="language-html">
-&lt;div class=&quot;checkbox-item&quot;&gt;
-    &lt;input type=&quot;checkbox&quot; name=&quot;include_me&quot; value=&quot;1&quot; id=&quot;check_include_me&quot;&gt;
-    &lt;label for=&quot;check_include_me&quot;&gt;
-        include mysql in calculation
-    &lt;/label&gt;
-&lt;/div&gt;
-            </code></pre>
-            <pre><code class="language-css">
 .checkbox-item {
     display: flex;
     flex-direction: row;
@@ -24,7 +5,7 @@
     align-items: stretch;
     align-content: stretch;
 
-    input[type=&quot;checkbox&quot;] {
+    input[type="checkbox"] {
         -webkit-appearance: none;
         display: inline-block;
         width: 1.5rem;
@@ -43,7 +24,7 @@
         flex-shrink: 0;
     
         &:checked {
-            background-image: url(${require('../../../images/x.svg')});
+            background-image: url(../images/x.svg);
         }
     
         & + label {
@@ -61,8 +42,3 @@
         }
     }
 }
-            </code></pre>
-        </div>
-    </div>
-    ${require('./_checkbox_explanation.html')}
-</section>
