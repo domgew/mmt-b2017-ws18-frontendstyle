@@ -63,6 +63,11 @@ ul.person-list {
     li {
         background-color: $secondary;
         border-radius: 0.28346rem;
+        margin-bottom: 0.5rem;
+
+        &:nth-last-of-type(1) {
+            margin-bottom: 0;
+        }
 
         &:hover {
             box-shadow: 0.2rem 0.2rem 0.5rem rgba(255,255,255,0.1);
@@ -83,8 +88,8 @@ ul.person-list {
                 margin-left: 0.5rem;
                 margin-right: 0.5rem;
                 text-overflow: ellipsis;
-                font-weight: 300;
                 font-family: 'Assistant';
+                font-weight: 300;
             }
     
             .amount {
@@ -97,9 +102,17 @@ ul.person-list {
     
                 &.positive {
                     color: $success;
+                    text-shadow: 0 0 1px darken($success, 20%);
                 }
                 &.negative {
                     color: $danger;
+                    text-shadow: 0 0 1px darken($danger, 20%);
+                }
+
+                span {
+                    display:inline-block;
+                    width: 0;
+                    visibility: hidden;
                 }
             }
         }
