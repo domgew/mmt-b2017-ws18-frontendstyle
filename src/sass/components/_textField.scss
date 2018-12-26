@@ -5,6 +5,8 @@ label {
     font-size: 1.3rem;
     display: block;
     padding: 0.5rem 0.7rem;
+    width: 100%;
+    max-width: $maxWidth;
 
     & + input[type="text"] {
         margin-top: -0.3rem;

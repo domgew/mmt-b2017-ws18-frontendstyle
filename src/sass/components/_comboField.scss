@@ -1,0 +1,13 @@
+input[type="text"][list] {
+    
+    &::-webkit-calendar-picker-indicator {
+        display: inline-block;
+        color: $white;
+        background-color: transparent;
+        border-radius: 0.28346rem;
+
+        &:hover {
+            background-color: $secondary;
+        }
+    }
+}

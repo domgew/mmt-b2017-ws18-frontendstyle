@@ -1,0 +1,41 @@
+<section>
+    <h4>Combo Field</h4>
+    <div class="component">
+        <div class="component-preview">
+            <div class="example">
+                <label for="text_name">name</label>
+                <input list="list_text_name" type="text" name="name" id="text_name" placeholder="Name ...">
+                <datalist id="list_text_name">
+                    <option value="Andrew Smith">
+                    <option value="Sophie">
+                </datalist>
+            </div>
+            <pre><code class="language-html">
+&lt;label for=&quot;text_name&quot;&gt;
+    name
+&lt;/label&gt;
+&lt;input list=&quot;list_text_name&quot; type=&quot;text&quot; name=&quot;name&quot; id=&quot;text_name&quot; placeholder=&quot;Name ...&quot;&gt;
+&lt;datalist id=&quot;list_text_name&quot;&gt;
+    &lt;option value=&quot;Andrew Smith&quot;&gt;
+    &lt;option value=&quot;Sophie&quot;&gt;
+&lt;/datalist&gt;
+            </code></pre>
+            <pre><code class="language-css">
+input[type=&quot;text&quot;][list] {
+
+    &::-webkit-calendar-picker-indicator {
+        display: inline-block;
+        color: $white;
+        background-color: transparent;
+        border-radius: 0.28346rem;
+
+        &:hover {
+            background-color: $secondary;
+        }
+    }
+}
+            </code></pre>
+        </div>
+    </div>
+    ${require('./_comboField_explanation.html')}
+</section>
