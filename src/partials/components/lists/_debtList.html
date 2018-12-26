@@ -1,3 +1,146 @@
 <section>
     <h4>Debt List</h4>
+    <div class="component">
+        <div class="component-preview">
+            <div class="example">
+                <ul class="debt-list">
+                    <li>
+                        <span class="amount positive">
+                            <span>+</span>€10,00
+                        </span>
+                        <span>Pizza</span>
+                    </li>
+                    <li>
+                        <span class="amount positive">
+                            <span>+</span>€25,00
+                        </span>
+                        <span>Cinema Popcorn and snacks</span>
+                    </li>
+                    <li>
+                        <span class="amount negative">
+                            <span>-</span>€17,50
+                        </span>
+                        <span>Birthday gift for Lena</span>
+                    </li>
+                    <li>
+                        <span class="amount positive">
+                            <span>+</span>€12,50
+                        </span>
+                        <span>Halloweenparty drinks and snacks</span>
+                    </li>
+                </ul>
+            </div>
+            <pre><code class="language-html">
+&lt;ul class=&quot;debt-list&quot;&gt;
+    &lt;li&gt;
+        &lt;span class=&quot;amount positive&quot;&gt;
+            &lt;span&gt;
+                +
+            &lt;/span&gt;
+            €10,00
+        &lt;/span&gt;
+        &lt;span&gt;
+            Pizza
+        &lt;/span&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+        &lt;span class=&quot;amount positive&quot;&gt;
+            &lt;span&gt;
+                +
+            &lt;/span&gt;
+            €25,00
+        &lt;/span&gt;
+        &lt;span&gt;
+            Cinema Popcorn and snacks
+        &lt;/span&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+        &lt;span class=&quot;amount negative&quot;&gt;
+            &lt;span&gt;
+                -
+            &lt;/span&gt;
+            €17,50
+        &lt;/span&gt;
+        &lt;span&gt;
+            Birthday gift for Lena
+        &lt;/span&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+        &lt;span class=&quot;amount positive&quot;&gt;
+            &lt;span&gt;
+                +
+            &lt;/span&gt;
+            €12,50
+        &lt;/span&gt;
+        &lt;span&gt;
+            Halloweenparty drinks and snacks
+        &lt;/span&gt;
+    &lt;/li&gt;
+&lt;/ul&gt;
+            </code></pre>
+            <pre><code class="language-css">
+ul.debt-list {
+    display: flex;
+    justify-content: flex-start;
+    align-items: stretch;
+    align-content: stretch;
+    flex-wrap: wrap;
+
+    li {
+        flex: 1 1 calc(50% - 1rem);
+        max-width: calc(50% - 1rem);
+        display: block;
+        background-color: $secondary;
+        border-radius: 0.28346rem;
+        padding: 1rem;
+
+        font-family: 'Assistant';
+        font-weight: 300;
+        font-size: 1.3rem;
+        color: $white;
+
+        .amount {
+            display: block;
+
+            font-family: 'Heebo';
+            font-weight: 300;
+            font-size: 2rem;
+
+            line-height: 1;
+            
+            &.positive {
+                color: $success;
+                text-shadow: 0 0 1px darken($success, 20%);
+            }
+            &.negative {
+                color: $danger;
+                text-shadow: 0 0 1px darken($danger, 20%);
+            }
+            span {
+                visibility: hidden;
+                display: inline-block;
+                width: 0;
+            }
+        }
+
+        span {
+            display: block;
+            white-space: nowrap;
+            overflow: hidden;
+            max-width: 100%;
+            text-overflow: ellipsis;
+        }
+
+        &:nth-of-type(2n) {
+            margin-left: 1rem;
+        }
+        &:not(:nth-last-of-type(1)):not(:nth-last-of-type(2)) {
+            margin-bottom: 1rem;
+        }
+    }
+}
+            </code></pre>
+        </div>
+    </div>
+    ${require('./_debtList_explanation.html')}
 </section>
