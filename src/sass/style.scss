@@ -92,6 +92,12 @@ main {
     margin-left: 3rem;
 }
 
+.colors{
+    p{
+        width: 80%;
+    }
+}
+
 #logos{
     img{
         padding: 0.2rem 0 0 3rem;
@@ -139,15 +145,19 @@ main {
     }
 }
 
-main section {
-    // padding-left: 1rem;
-    scroll-margin-top: 6rem;
+#typo{
+    td {
+        grid-template-columns: 1fr;
+    }
 }
-// main > section {
-//     border-bottom: 1px solid rgba(0,0,0,0.3);
-//     padding-left: 0;
-// }
 
+main section {
+    scroll-margin-top: 4rem;
+}
+
+p{
+    hyphens: auto;
+}
 h2 {
     font-size: 3rem;
     font-weight: 600;
@@ -192,11 +202,95 @@ td {
 
 footer {
     text-align: center;
-    // font-size: smaller;
     padding: 1.5rem 0;
-    // background-color: $secondary;
     background-color: $primary;
     color: $white;
     letter-spacing: 0.05rem;
     font-weight: 300;
+}
+
+// Responsive
+
+@media screen and (max-width:1440px){
+
+    main {
+        margin: 10rem 8rem 8rem;
+    
+        h1 {
+            margin-left: 0;
+        }
+        .balken{
+            margin-left: 0;
+        }
+        .introduction {
+            width: 85%;
+        }
+    }
+
+    h2 {
+        margin-left: 0;
+    }
+
+    #components{
+        .component {
+            margin-left: 0;
+        }
+    }
+}
+
+@media screen and (max-width:1024px){
+
+    main {
+        margin: 10rem 2rem 8rem;
+    }
+}
+
+@media screen and (max-width:780px){
+
+    main {
+        margin: 15rem 2rem 8rem;
+
+        h1{
+            line-height: 1;
+        }
+        .introduction {
+            width: 100%;
+        }
+    }
+
+    .main_nav{
+    
+        ul{
+            grid-column: 1/2;
+            padding: 0;
+            li {
+                width: 100%;
+                display: inline-block;
+                padding: 0.3rem 0;
+                text-align: center;
+                a {
+                    margin: 0 0.5rem;
+                }
+            }
+        }
+        img {
+            grid-column: 1/2;
+            width: 13rem;
+            padding: 1rem 0;
+            margin: auto;
+        }
+    }
+
+    th {
+        padding: 0.5rem 0;
+    }
+
+    #methodology {
+        p{
+            padding: 0; 
+        }
+        ul {
+            padding-left: 1.5rem;
+        }
+    }
 }
