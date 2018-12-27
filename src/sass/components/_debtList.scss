@@ -11,12 +11,19 @@ ul.debt-list {
         display: block;
         background-color: $secondary;
         border-radius: 0.28346rem;
-        padding: 1rem;
+        a {
+            padding: 1rem;
+            font-family: 'Assistant';
+            font-weight: 300;
+            font-size: 1.3rem;
+            color: $white;
+            text-decoration: none;
+            display: block;
+        }
 
-        font-family: 'Assistant';
-        font-weight: 300;
-        font-size: 1.3rem;
-        color: $white;
+        &:hover {
+            box-shadow: 0.2rem 0.2rem 0.5rem rgba(255,255,255,0.1);
+        }
 
         .amount {
             display: block;

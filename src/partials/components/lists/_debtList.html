@@ -5,76 +5,92 @@
             <div class="example">
                 <ul class="debt-list">
                     <li>
-                        <span class="amount positive">
-                            <span>+</span>€10,00
-                        </span>
-                        <span>Pizza</span>
+                        <a href="#">
+                            <span class="amount positive">
+                                <span>+</span>€10,00
+                            </span>
+                            <span>Pizza</span>
+                        </a>
                     </li>
                     <li>
-                        <span class="amount positive">
-                            <span>+</span>€25,00
-                        </span>
-                        <span>Cinema Popcorn and snacks</span>
+                        <a href="#">
+                            <span class="amount positive">
+                                <span>+</span>€25,00
+                            </span>
+                            <span>Cinema Popcorn and Snacks</span>
+                        </a>
                     </li>
                     <li>
-                        <span class="amount negative">
-                            <span>-</span>€17,50
-                        </span>
-                        <span>Birthday gift for Lena</span>
+                        <a href="#">
+                            <span class="amount negative">
+                                <span>-</span>€17,50
+                            </span>
+                            <span>Birthday Gift for Lena</span>
+                        </a>
                     </li>
                     <li>
-                        <span class="amount positive">
-                            <span>+</span>€12,50
-                        </span>
-                        <span>Halloweenparty drinks and snacks</span>
+                        <a href="#">
+                            <span class="amount positive">
+                                <span>+</span>€12,50
+                            </span>
+                            <span>Halloween Party Drinks and Snacks</span>
+                        </a>
                     </li>
                 </ul>
             </div>
             <pre><code class="language-html">
 &lt;ul class=&quot;debt-list&quot;&gt;
     &lt;li&gt;
-        &lt;span class=&quot;amount positive&quot;&gt;
-            &lt;span&gt;
-                +
+        &lt;a href=&quot;#&quot;&gt;
+            &lt;span class=&quot;amount positive&quot;&gt;
+                &lt;span&gt;
+                    +
+                &lt;/span&gt;
+                €10,00
             &lt;/span&gt;
-            €10,00
-        &lt;/span&gt;
-        &lt;span&gt;
-            Pizza
-        &lt;/span&gt;
+            &lt;span&gt;
+                Pizza
+            &lt;/span&gt;
+        &lt;/a&gt;
     &lt;/li&gt;
     &lt;li&gt;
-        &lt;span class=&quot;amount positive&quot;&gt;
-            &lt;span&gt;
-                +
+        &lt;a href=&quot;#&quot;&gt;
+            &lt;span class=&quot;amount positive&quot;&gt;
+                &lt;span&gt;
+                    +
+                &lt;/span&gt;
+                €25,00
             &lt;/span&gt;
-            €25,00
-        &lt;/span&gt;
-        &lt;span&gt;
-            Cinema Popcorn and snacks
-        &lt;/span&gt;
+            &lt;span&gt;
+                Cinema Popcorn and Snacks
+            &lt;/span&gt;
+        &lt;/a&gt;
     &lt;/li&gt;
     &lt;li&gt;
-        &lt;span class=&quot;amount negative&quot;&gt;
-            &lt;span&gt;
-                -
+        &lt;a href=&quot;#&quot;&gt;
+            &lt;span class=&quot;amount negative&quot;&gt;
+                &lt;span&gt;
+                    -
+                &lt;/span&gt;
+                €17,50
             &lt;/span&gt;
-            €17,50
-        &lt;/span&gt;
-        &lt;span&gt;
-            Birthday gift for Lena
-        &lt;/span&gt;
+            &lt;span&gt;
+                Birthday Gift for Lena
+            &lt;/span&gt;
+        &lt;/a&gt;
     &lt;/li&gt;
     &lt;li&gt;
-        &lt;span class=&quot;amount positive&quot;&gt;
-            &lt;span&gt;
-                +
+        &lt;a href=&quot;#&quot;&gt;
+            &lt;span class=&quot;amount positive&quot;&gt;
+                &lt;span&gt;
+                    +
+                &lt;/span&gt;
+                €12,50
             &lt;/span&gt;
-            €12,50
-        &lt;/span&gt;
-        &lt;span&gt;
-            Halloweenparty drinks and snacks
-        &lt;/span&gt;
+            &lt;span&gt;
+                Halloween Party Drinks and Snacks
+            &lt;/span&gt;
+        &lt;/a&gt;
     &lt;/li&gt;
 &lt;/ul&gt;
             </code></pre>
@@ -92,12 +108,19 @@ ul.debt-list {
         display: block;
         background-color: $secondary;
         border-radius: 0.28346rem;
-        padding: 1rem;
+        a {
+            padding: 1rem;
+            font-family: 'Assistant';
+            font-weight: 300;
+            font-size: 1.3rem;
+            color: $white;
+            text-decoration: none;
+            display: block;
+        }
 
-        font-family: 'Assistant';
-        font-weight: 300;
-        font-size: 1.3rem;
-        color: $white;
+        &:hover {
+            box-shadow: 0.2rem 0.2rem 0.5rem rgba(255,255,255,0.1);
+        }
 
         .amount {
             display: block;

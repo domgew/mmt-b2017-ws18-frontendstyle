@@ -6,42 +6,82 @@
             <div class="example">
                 <dl class="list-expander" role="presentation">
                     <dt role="heading" aria-level="3" data-expanded="false">
-                        <button aria-expanded="false" aria-controls="already-paid-list" id="btn-already-paid">already paid</button>
+                        <button aria-expanded="false" aria-controls="list-already-paid" id="btn-already-paid">already paid</button>
                     </dt>
                     <dd id="list-already-paid" aria-labelledby="btn-already-paid" role="region">
                         <ul class="debt-list">
                             <li>
-                                <span class="amount positive">
-                                    <span>+</span>€10,00
-                                </span>
-                                <span>Pizza</span>
+                                <a href="#">
+                                    <span class="amount positive">
+                                        <span>+</span>€10,00
+                                    </span>
+                                    <span>Pizza</span>
+                                </a>
                             </li>
                             <li>
-                                <span class="amount positive">
-                                    <span>+</span>€25,00
-                                </span>
-                                <span>Cinema Popcorn and snacks</span>
+                                <a href="#">
+                                    <span class="amount positive">
+                                        <span>+</span>€25,00
+                                    </span>
+                                    <span>Cinema Popcorn and Snacks</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span class="amount negative">
+                                        <span>-</span>€17,50
+                                    </span>
+                                    <span>Birthday Gift for Lena</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span class="amount positive">
+                                        <span>+</span>€12,50
+                                    </span>
+                                    <span>Halloween Party Drinks and Snacks</span>
+                                </a>
                             </li>
                         </ul>
                     </dd>
                 </dl>
                 <dl class="list-expander" role="presentation">
                     <dt role="heading" aria-level="3" data-expanded="true">
-                        <button aria-expanded="true" aria-controls="already-paid-list2" id="btn-already-paid2">already paid</button>
+                        <button aria-expanded="true" aria-controls="list-already-paid2" id="btn-already-paid2">already paid</button>
                     </dt>
                     <dd id="list-already-paid2" aria-labelledby="btn-already-paid2" role="region">
                         <ul class="debt-list">
                             <li>
-                                <span class="amount positive">
-                                    <span>+</span>€10,00
-                                </span>
-                                <span>Pizza</span>
+                                <a href="#">
+                                    <span class="amount positive">
+                                        <span>+</span>€10,00
+                                    </span>
+                                    <span>Pizza</span>
+                                </a>
                             </li>
                             <li>
-                                <span class="amount positive">
-                                    <span>+</span>€25,00
-                                </span>
-                                <span>Cinema Popcorn and snacks</span>
+                                <a href="#">
+                                    <span class="amount positive">
+                                        <span>+</span>€25,00
+                                    </span>
+                                    <span>Cinema Popcorn and Snacks</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span class="amount negative">
+                                        <span>-</span>€17,50
+                                    </span>
+                                    <span>Birthday Gift for Lena</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span class="amount positive">
+                                        <span>+</span>€12,50
+                                    </span>
+                                    <span>Halloween Party Drinks and Snacks</span>
+                                </a>
                             </li>
                         </ul>
                     </dd>
@@ -57,26 +97,56 @@
     &lt;dd id=&quot;list-already-paid&quot; aria-labelledby=&quot;btn-already-paid&quot; role=&quot;region&quot;&gt;
         &lt;ul class=&quot;debt-list&quot;&gt;
             &lt;li&gt;
-                &lt;span class=&quot;amount positive&quot;&gt;
-                    &lt;span&gt;
-                        +
+                &lt;a href=&quot;#&quot;&gt;
+                    &lt;span class=&quot;amount positive&quot;&gt;
+                        &lt;span&gt;
+                            +
+                        &lt;/span&gt;
+                        €10,00
                     &lt;/span&gt;
-                    €10,00
-                &lt;/span&gt;
-                &lt;span&gt;
-                    Pizza
-                &lt;/span&gt;
+                    &lt;span&gt;
+                        Pizza
+                    &lt;/span&gt;
+                &lt;/a&gt;
             &lt;/li&gt;
             &lt;li&gt;
-                &lt;span class=&quot;amount positive&quot;&gt;
-                    &lt;span&gt;
-                        +
+                &lt;a href=&quot;#&quot;&gt;
+                    &lt;span class=&quot;amount positive&quot;&gt;
+                        &lt;span&gt;
+                            +
+                        &lt;/span&gt;
+                        €25,00
                     &lt;/span&gt;
-                    €25,00
-                &lt;/span&gt;
-                &lt;span&gt;
-                    Cinema Popcorn and snacks
-                &lt;/span&gt;
+                    &lt;span&gt;
+                        Cinema Popcorn and Snacks
+                    &lt;/span&gt;
+                &lt;/a&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;a href=&quot;#&quot;&gt;
+                    &lt;span class=&quot;amount negative&quot;&gt;
+                        &lt;span&gt;
+                            -
+                        &lt;/span&gt;
+                        €17,50
+                    &lt;/span&gt;
+                    &lt;span&gt;
+                        Birthday Gift for Lena
+                    &lt;/span&gt;
+                &lt;/a&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;a href=&quot;#&quot;&gt;
+                    &lt;span class=&quot;amount positive&quot;&gt;
+                        &lt;span&gt;
+                            +
+                        &lt;/span&gt;
+                        €12,50
+                    &lt;/span&gt;
+                    &lt;span&gt;
+                        Halloween Party Drinks and Snacks
+                    &lt;/span&gt;
+                &lt;/a&gt;
             &lt;/li&gt;
         &lt;/ul&gt;
     &lt;/dd&gt;
@@ -90,26 +160,56 @@
     &lt;dd id=&quot;list-already-paid2&quot; aria-labelledby=&quot;btn-already-paid2&quot; role=&quot;region&quot;&gt;
         &lt;ul class=&quot;debt-list&quot;&gt;
             &lt;li&gt;
-                &lt;span class=&quot;amount positive&quot;&gt;
-                    &lt;span&gt;
-                        +
+                &lt;a href=&quot;#&quot;&gt;
+                    &lt;span class=&quot;amount positive&quot;&gt;
+                        &lt;span&gt;
+                            +
+                        &lt;/span&gt;
+                        €10,00
                     &lt;/span&gt;
-                    €10,00
-                &lt;/span&gt;
-                &lt;span&gt;
-                    Pizza
-                &lt;/span&gt;
+                    &lt;span&gt;
+                        Pizza
+                    &lt;/span&gt;
+                &lt;/a&gt;
             &lt;/li&gt;
             &lt;li&gt;
-                &lt;span class=&quot;amount positive&quot;&gt;
-                    &lt;span&gt;
-                        +
+                &lt;a href=&quot;#&quot;&gt;
+                    &lt;span class=&quot;amount positive&quot;&gt;
+                        &lt;span&gt;
+                            +
+                        &lt;/span&gt;
+                        €25,00
                     &lt;/span&gt;
-                    €25,00
-                &lt;/span&gt;
-                &lt;span&gt;
-                    Cinema Popcorn and snacks
-                &lt;/span&gt;
+                    &lt;span&gt;
+                        Cinema Popcorn and Snacks
+                    &lt;/span&gt;
+                &lt;/a&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;a href=&quot;#&quot;&gt;
+                    &lt;span class=&quot;amount negative&quot;&gt;
+                        &lt;span&gt;
+                            -
+                        &lt;/span&gt;
+                        €17,50
+                    &lt;/span&gt;
+                    &lt;span&gt;
+                        Birthday Gift for Lena
+                    &lt;/span&gt;
+                &lt;/a&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;a href=&quot;#&quot;&gt;
+                    &lt;span class=&quot;amount positive&quot;&gt;
+                        &lt;span&gt;
+                            +
+                        &lt;/span&gt;
+                        €12,50
+                    &lt;/span&gt;
+                    &lt;span&gt;
+                        Halloween Party Drinks and Snacks
+                    &lt;/span&gt;
+                &lt;/a&gt;
             &lt;/li&gt;
         &lt;/ul&gt;
     &lt;/dd&gt;
