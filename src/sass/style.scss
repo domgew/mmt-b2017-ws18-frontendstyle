@@ -135,7 +135,7 @@ main {
     }
 }
 #components{
-    section {
+    & > section, & > section > section {
         margin: 2rem 0;
     }
     h4 {

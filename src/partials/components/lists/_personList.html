@@ -6,16 +6,16 @@
                 <ul class="person-list">
                     <li>
                         <a href="#">
-                            <span class="circle-icon">A</span>
+                            <span class="circle-icon" aria-hidden="true">A</span>
                             <strong>Andrew Smith</strong>
-                            <span class="amount positive"><span>+</span>30,00€</span>
+                            <span class="amount positive"><span class="screen-reader">plus</span>30.00€</span>
                         </a>
                     </li>
                     <li>
                         <a href="#">
-                            <span class="circle-icon">S</span>
+                            <span class="circle-icon" aria-hidden="true">S</span>
                             <strong>Sophie</strong>
-                            <span class="amount negative"><span>-</span>7,00€</span>
+                            <span class="amount negative"><span class="screen-reader">minus</span>7.00€</span>
                         </a>
                     </li>
                 </ul>
@@ -24,33 +24,33 @@
 &lt;ul class=&quot;person-list&quot;&gt;
     &lt;li&gt;
         &lt;a href=&quot;#&quot;&gt;
-            &lt;span class=&quot;circle-icon&quot;&gt;
+            &lt;span class=&quot;circle-icon&quot; aria-hidden=&quot;true&quot;&gt;
                 A
             &lt;/span&gt;
             &lt;strong&gt;
                 Andrew Smith
             &lt;/strong&gt;
             &lt;span class=&quot;amount positive&quot;&gt;
-                &lt;span&gt;
-                    +
+                &lt;span class=&quot;screen-reader&quot;&gt;
+                    plus
                 &lt;/span&gt;
-                30,00€
+                30.00€
             &lt;/span&gt;
         &lt;/a&gt;
     &lt;/li&gt;
     &lt;li&gt;
         &lt;a href=&quot;#&quot;&gt;
-            &lt;span class=&quot;circle-icon&quot;&gt;
+            &lt;span class=&quot;circle-icon&quot; aria-hidden=&quot;true&quot;&gt;
                 S
             &lt;/span&gt;
             &lt;strong&gt;
                 Sophie
             &lt;/strong&gt;
             &lt;span class=&quot;amount negative&quot;&gt;
-                &lt;span&gt;
-                    -
+                &lt;span class=&quot;screen-reader&quot;&gt;
+                    minus
                 &lt;/span&gt;
-                7,00€
+                7.00€
             &lt;/span&gt;
         &lt;/a&gt;
     &lt;/li&gt;
@@ -107,12 +107,6 @@ ul.person-list {
                 &.negative {
                     color: $danger;
                     text-shadow: 0 0 1px darken($danger, 20%);
-                }
-
-                span {
-                    display:inline-block;
-                    width: 0;
-                    visibility: hidden;
                 }
             }
         }

@@ -50,12 +50,6 @@ ul.person-list {
                     color: $danger;
                     text-shadow: 0 0 1px darken($danger, 20%);
                 }
-
-                span {
-                    display:inline-block;
-                    width: 0;
-                    visibility: hidden;
-                }
             }
         }
     }

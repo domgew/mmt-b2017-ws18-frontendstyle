@@ -42,11 +42,11 @@ ul.debt-list {
                 color: $danger;
                 text-shadow: 0 0 1px darken($danger, 20%);
             }
-            span {
-                visibility: hidden;
-                display: inline-block;
-                width: 0;
-            }
+            // span {
+            //     visibility: hidden;
+            //     display: inline-block;
+            //     width: 0;
+            // }
         }
 
         span {
