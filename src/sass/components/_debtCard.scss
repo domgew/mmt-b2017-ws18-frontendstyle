@@ -26,6 +26,7 @@ article.debt-card {
             font-family: 'Heebo';
             font-weight: 300;
             font-size: 4rem;
+            white-space: nowrap;
 
             &.positive {
                 color: $success;
@@ -35,12 +36,6 @@ article.debt-card {
                 color: $danger;
                 text-shadow: 0 0 1px darken($danger, 20%);
             }
-
-            // span {
-            //     visibility: hidden;
-            //     display: inline-block;
-            //     width: 0;
-            // }
         }
         h3 {
             font-size: 1.8rem;
