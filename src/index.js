@@ -2,7 +2,8 @@ import './sass/style.scss'
 
 
 import Prism from 'prismjs';
-import 'prismjs/themes/prism.css'
+import 'prismjs/themes/prism-okaidia.css';
+// import 'prismjs/themes/prism.css'
 // import 'prismjs/components/prism-html.min.js'
 // import 'prismjs/components/prism-css.min.js'
 
