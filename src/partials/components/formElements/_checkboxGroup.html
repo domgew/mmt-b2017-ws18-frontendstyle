@@ -60,7 +60,9 @@
             </code></pre>
             <pre><code class="language-css">
 fieldset.checkbox-group {
-    legend {
+    width: 100%;
+    max-width: $maxWidth;
+    & > legend {
         background: none;
         color: $white;
         font-family: 'Assistant';
@@ -70,14 +72,14 @@ fieldset.checkbox-group {
         width: 100%;
         max-width: $maxWidth;
     }
-    legend + ul {
+    & > legend + ul {
         background-color: $secondary;
         padding: 1rem;
         border-radius: 0.28346rem;
         margin-top: -0.3rem;
 
-        li.checkbox-item {
-            input[type=&quot;checkbox&quot;] {
+        & > li.checkbox-item {
+            & > input[type=&quot;checkbox&quot;] {
                 background-color: $background;
             }
 
@@ -86,7 +88,7 @@ fieldset.checkbox-group {
             }
         }
     }
-}
+}                    
             </code></pre>
         </div>
     </div>

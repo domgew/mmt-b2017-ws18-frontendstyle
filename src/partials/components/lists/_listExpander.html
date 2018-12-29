@@ -240,9 +240,9 @@
 &lt;/dl&gt;
             </code></pre>
             <pre><code class="language-css">
-dl.list-expander {
-    dt {
-        button {
+dl[role=&quot;presentation&quot;].list-expander {
+    & > dt[role=&quot;heading&quot;] {
+        & > button {
             display: block;
             width: 100%;
             max-width: unset;
@@ -265,25 +265,25 @@ dl.list-expander {
                 background-color: rgba($secondary, 0.2);
             }
         }
-    }
 
-    dt[data-expanded="false"] {
-        button {
-            background-image: url(${require('../../../images/pfeil.svg')});
+        &[data-expanded=&quot;false&quot;] {
+            & > button {
+                background-image: url(${require('../../../images/pfeil.svg')});
+            }
+            & + dd[role="region"] {
+                display: none;
+            }
         }
-        & + dd {
-            display: none;
+        &[data-expanded=&quot;true&quot;] {
+            button {
+                background-image: url(${require('../../../images/pfeil_inv.svg')});
+            }
+            & + dd[role="region"] {
+                display: block;
+            }
         }
     }
-    dt[data-expanded="true"] {
-        button {
-            background-image: url(${require('../../../images/pfeil_inv.svg')});
-        }
-        & + dd {
-            display: block;
-        }
-    }
-}
+}                    
             </code></pre>
         </div>
     </div>

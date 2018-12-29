@@ -20,6 +20,7 @@ button.icon {
     height: 4rem;
     border-radius: 50%;
     font-family: Assistant;
+    font-weight: 300;
     font-size: 0;
     position: relative;
 
@@ -64,10 +65,11 @@ button.icon {
             background-color: darken($danger, 5%);
         }
     }
-}
-button.icon:hover {
-    box-shadow: 0 0.94488rem 1.1811rem #0000001E;
-    background-color: darken($primary, 5%);
+
+    &:hover {
+        box-shadow: 0 0.94488rem 1.1811rem #0000001E;
+        background-color: darken($primary, 5%);
+    }
 }
             </code></pre>
         </div>
