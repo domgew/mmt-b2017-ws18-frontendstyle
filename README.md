@@ -1,27 +1,66 @@
-# Webpack for Webdevs
-## A webpack 4 based setup
+# debtrack Style Guide
 
-### Installation
-* If you haven't already, install [npm](https://www.npmjs.com/).
-* Clone this repository to your local machine.
-* `npm install`
+## Production
 
-### How to use
-* `npm start` starts a local server. If you change any of the files in `src/`, the browser will reflect the changes automatically ("autorefresh", "autoreload").
-* `npm run build` builds a production bundle in `dist/`
+This style guide is hosted on Netlify (https://debtrack-styleguide.netlify.com/).
 
-### Features
-* uses sass (supporting the scss-syntax), minifies and auto-prefixes your css for production
-* auto-prefixing depending on your choice of browsers you want to support in `.browserslist.rc`
-* uses hashes for the js/css-filenames to prevent caching problems
-* autorefreshes browsers (autoreloads)
-* concatenates and minifies your js-files using webpack's intelligent dependency graph
-* ES6 support via babel out of the box
-* creates all the files needed for production in the build directory
-* minifies images (jpg, png, jpg, svg)
-* includes various icon references for touch devices
+Every commit/push to the master branch triggers a build. Once the build (`npm run build`) is finished the `dist` directory is hosted.
 
-## Netlify
-https://modest-shockley-e911b5.netlify.com/
+## Development
 
-push to master
+* clone this repository
+
+```bash=linux
+git clone https://github.com/domgew/mmt-b2017-ws18-frontendstyle.git
+```
+
+* switch to the development branch
+
+```bash=linux
+git checkout development
+```
+
+* install all dependencies
+
+```bash=linux
+npm ci
+```
+
+* start the development server
+
+```bash=linux
+npm start
+```
+
+* start working in the `src` directory
+
+* commit often (useful steps) and push
+
+### How to Deploy
+
+* pull all changes on the development branch
+```bash=linux
+git checkout development
+git pull
+```
+
+* pull all changes on the master branch
+```bash=linux
+git checkout master
+git pull
+```
+
+* merge the branches
+```bash=linux
+git checkout master
+git merge development
+```
+
+* push the result to the remote repository and pull the new state
+```bash=linux
+git checkout master
+git push
+git pull
+git checkout development
+git pull
+```
