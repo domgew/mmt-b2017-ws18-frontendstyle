@@ -48,8 +48,9 @@ button.icon {
             background-color: darken($danger, 5%);
         }
     }
-}
-button.icon:hover {
-    box-shadow: 0 0.94488rem 1.1811rem #0000001E; //4mm 5mm
-    background-color: darken($primary, 5%);
+
+    &:hover {
+        box-shadow: 0 0.94488rem 1.1811rem #0000001E; //4mm 5mm
+        background-color: darken($primary, 5%);
+    }
 }

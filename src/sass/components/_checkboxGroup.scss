@@ -1,7 +1,7 @@
 fieldset.checkbox-group {
     width: 100%;
     max-width: $maxWidth;
-    legend {
+    & > legend {
         background: none;
         color: $white;
         font-family: 'Assistant';
@@ -11,14 +11,14 @@ fieldset.checkbox-group {
         width: 100%;
         max-width: $maxWidth;
     }
-    legend + ul {
+    & > legend + ul {
         background-color: $secondary;
         padding: 1rem;
         border-radius: 0.28346rem;
         margin-top: -0.3rem;
 
-        li.checkbox-item {
-            input[type="checkbox"] {
+        & > li.checkbox-item {
+            & > input[type="checkbox"] {
                 background-color: $background;
             }
 

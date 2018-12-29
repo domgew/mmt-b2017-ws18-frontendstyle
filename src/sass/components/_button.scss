@@ -16,8 +16,9 @@ button {
     transition-duration: 300ms;
 
     cursor: pointer;
-}
-button:hover {
-    background: linear-gradient(0.25turn, $primary, #825594);
-    box-shadow: 0 0.94488rem 1.1811rem #0000001E; //4mm 5mm
+
+    &:hover {
+        background: linear-gradient(0.25turn, $primary, #825594);
+        box-shadow: 0 0.94488rem 1.1811rem #0000001E; //4mm 5mm
+    }
 }
