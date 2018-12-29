@@ -12,10 +12,12 @@
             </code></pre>
             <pre><code class="language-css">
 button {
-    padding: 0.5em 4em;
+    padding: 0.5em 0.5rem;
     border-radius: 0.28346rem;
+    width: 100%;
+    max-width: $maxWidth;
 
-    background-image: linear-gradient(0.25turn, #825594, #8E2462);
+    background-image: linear-gradient(0.25turn, #825594, $primary);
     box-shadow: 0 0.47244rem 0.70866rem #0000001E;
     color: white;
 
@@ -27,11 +29,13 @@ button {
     transition-duration: 300ms;
 
     cursor: pointer;
+
+    &:hover {
+        background: linear-gradient(0.25turn, $primary, #825594);
+        box-shadow: 0 0.94488rem 1.1811rem #0000001E;
+    }
 }
-button:hover {
-    background: linear-gradient(0.25turn, #8E2462, #825594);
-    box-shadow: 0 0.94488rem 1.1811rem #0000001E;
-}
+                    
             </code></pre>
         </div>
     </div>

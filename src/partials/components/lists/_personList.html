@@ -59,8 +59,9 @@
             <pre><code class="language-css">
 ul.person-list {
     list-style:none;
+    max-width: $maxWidth;
 
-    li {
+    & > li {
         background-color: $secondary;
         border-radius: 0.28346rem;
         margin-bottom: 0.5rem;
@@ -73,18 +74,18 @@ ul.person-list {
             box-shadow: 0.2rem 0.2rem 0.5rem rgba(255,255,255,0.1);
         }
 
-        a {
+        & > a {
             display: block;
             color: $white;
             padding: 0.5rem;
             position: relative;
             text-decoration: none;
 
-            strong, .amount {
+            & > strong, & > .amount {
                 font-size: 1.6rem;
             }
     
-            strong {
+            & > strong {
                 margin-left: 0.5rem;
                 margin-right: 0.5rem;
                 text-overflow: ellipsis;
@@ -92,7 +93,7 @@ ul.person-list {
                 font-weight: 300;
             }
     
-            .amount {
+            & > .amount {
                 font-family: 'Heebo';
                 font-weight: 300;
                 position: absolute;
@@ -111,7 +112,7 @@ ul.person-list {
             }
         }
     }
-}
+}                    
             </code></pre>
         </div>
     </div>

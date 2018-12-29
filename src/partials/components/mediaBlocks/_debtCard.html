@@ -90,25 +90,28 @@ article.debt-card {
     display: flex;
     flex-direction: row;
     justify-content: stretch;
-    align-items: stretch;
+    align-items: center;
     font-family: 'Assistant';
     font-weight: 300;
-    color: white;
+    color: $white;
     margin-bottom: 1rem;
+    max-width: $maxWidth;
 
-    section:nth-of-type(1) {
+    & > section:nth-of-type(1) {
         flex-grow: 1;
         flex-shrink: 1;
         width: 100%;
         padding: 1rem 0.5rem 1rem 0;
 
-        h2 {
+        & > h2 {
             font-size: 1.3rem;
+            color: $white;
         }
-        .amount {
+        & > .amount {
             font-family: 'Heebo';
             font-weight: 300;
-            font-size: 4.5rem;
+            font-size: 4rem;
+            white-space: nowrap;
 
             &.positive {
                 color: $success;
@@ -118,18 +121,12 @@ article.debt-card {
                 color: $danger;
                 text-shadow: 0 0 1px darken($danger, 20%);
             }
-
-            span {
-                visibility: hidden;
-                display: inline-block;
-                width: 0;
-            }
         }
-        h3 {
+        & > h3 {
             font-size: 1.8rem;
         }
     }
-    section:nth-of-type(2) {
+    & > section:nth-of-type(2) {
         flex-grow: 0;
         flex-shrink: 0;
         width: 6rem;
@@ -139,13 +136,13 @@ article.debt-card {
         align-items: center;
         min-height: 12rem;
         border-left: 1px solid rgba($white,0.4);
-        padding: 0 1rem;
+        padding: 1rem 1rem;
 
-        button:nth-last-of-type(1) {
+        & > button:nth-last-of-type(1) {
             margin-top: 0.8rem;
         }
     }
-}
+}                    
             </code></pre>
         </div>
     </div>

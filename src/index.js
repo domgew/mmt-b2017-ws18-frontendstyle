@@ -3,16 +3,9 @@ import './sass/style.scss'
 
 import Prism from 'prismjs';
 import 'prismjs/themes/prism-okaidia.css';
-// import 'prismjs/themes/prism.css'
-// import 'prismjs/components/prism-html.min.js'
-// import 'prismjs/components/prism-css.min.js'
 
-
- //"webpack-dev-server --mode development --open"
-
-  const elements = document.querySelectorAll('.component-preview');
-
-  elements.forEach(element=>{
+const elements = document.querySelectorAll('.component-preview');
+elements.forEach(element=>{
     const tabExample = document.createElement('a'), tabHTML = document.createElement('a'), tabCSS = document.createElement('a');
     const tabLiE = document.createElement('li'),tabLiH = document.createElement('li'),tabLiC = document.createElement('li');
     const tabUl = document.createElement('ul');
@@ -26,19 +19,19 @@ import 'prismjs/themes/prism-okaidia.css';
     tabCSS.setAttribute('data-value','css');
     //event listeners for tabs
     tabExample.addEventListener('click',(e)=>{
-      e.preventDefault();
-      element.parentElement.classList.remove('show-example','show-html','show-css');
-      element.parentElement.classList.add('show-example');
+        e.preventDefault();
+        element.parentElement.classList.remove('show-example','show-html','show-css');
+        element.parentElement.classList.add('show-example');
     });
     tabHTML.addEventListener('click',(e)=>{
-      e.preventDefault();
-      element.parentElement.classList.remove('show-example','show-html','show-css');
-      element.parentElement.classList.add('show-html');
+        e.preventDefault();
+        element.parentElement.classList.remove('show-example','show-html','show-css');
+        element.parentElement.classList.add('show-html');
     });
     tabCSS.addEventListener('click',(e)=>{
-      e.preventDefault();
-      element.parentElement.classList.remove('show-example','show-html','show-css');
-      element.parentElement.classList.add('show-css');
+        e.preventDefault();
+        element.parentElement.classList.remove('show-example','show-html','show-css');
+        element.parentElement.classList.add('show-css');
     });
     //tab in list item
     tabLiE.appendChild(tabExample);
@@ -52,4 +45,4 @@ import 'prismjs/themes/prism-okaidia.css';
     tabs.appendChild(tabUl);
     //insert the navigation before the tabbed view
     element.parentElement.insertBefore(tabs,element);
-  });
+});
