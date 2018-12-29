@@ -1,7 +1,11 @@
 <section>
     <h3>File Structure</h3>
-    <!--TODO: extend + icons-->
+    <!--TODO: icons-->
     <ul>
+        <li class="folder">
+            <span>dist:</span>
+            <small>the automatically created output after compiling the application</small>
+        </li>
         <li class="folder">
             <span>src:</span>
             <small>all the files used to create the application</small>
@@ -9,10 +13,54 @@
                 <li class="folder">
                     <span>images:</span>
                     <small>images used by the application</small>
+                    <ul>
+                        <li class="file">
+                            <span>logo.svg:</span>
+                            <small>the logo of the application</small>
+                        </li>
+                        <li class="file">
+                            <span>icon_add.svg:</span>
+                            <small>the icon for adding</small>
+                        </li>
+                        <li class="file">...</li>
+                    </ul>
                 </li>
                 <li class="folder">
                     <span>sass:</span>
                     <small>style files</small>
+                    <ul>
+                        <li class="folder">
+                            <span>components:</span>
+                            <small>the individual components of the application</small>
+                            <ul>
+                                <li class="file">
+                                    <span>_index.scss:</span>
+                                    <small>the components entry point (here all components are referenced)</small>
+                                </li>
+                                <li class="file">
+                                    <span>_button.scss:</span>
+                                    <small>the button component</small>
+                                </li>
+                                <li class="file">...</li>
+                            </ul>
+                        </li>
+                        <li class="file">
+                            <span>style.scss:</span>
+                            <small>the main style file (entry point for the application stylesheet)</small>
+                        </li>
+                        <li class="file">
+                            <span>_reset.scss:</span>
+                            <small>a style partial that removes most of the default styles of the browsers</small>
+                        </li>
+                        <li class="file">
+                            <span>_global.scss</span>
+                            <small>a style partial that holds all global/application wide styles</small>
+                        </li>
+                        <li class="file">
+                            <span>_variables.scss</span>
+                            <small>a style partial in which the SASS variables are set</small>
+                        </li>
+                    </ul>
                 </li>
                 <li class="folder">
                     <span>pages:</span>
@@ -29,8 +77,24 @@
             <small>the installed packages</small>
         </li>
         <li class="file">
+            <span>.browserlist</span>
+            <small>a programmatic description which browsers should be supported</small>
+        </li>
+        <li class="file">
+            <span>.editorconfig</span>
+            <small>a programmatic description of how to "format" code (e.g. indentation)</small>
+        </li>
+        <li class="file">
+            <span>.gitignore</span>
+            <small>a programmatic description which file are automatically created and therefor should not be added to the repository</small>
+        </li>
+        <li class="file">
             <span>package.json:</span>
             <small>programmatic description of the project</small>
+        </li>
+        <li class="file">
+            <span>package-lock.json</span>
+            <small>additional information to the package.json</small>
         </li>
         <li>
             <span>README.md:</span>
