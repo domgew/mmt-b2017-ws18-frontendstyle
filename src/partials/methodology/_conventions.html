@@ -1,19 +1,77 @@
 <section class="namingConv">
     <h3>Conventions</h3>
-    <!--high specificity; component root class (if necessary tag+attribute|exception standard elements like button/input); within component chaining (specific + '>');-->
-    <!--TODO: rewrite-->
-    <p>BEM <small>(Block__Element--Modifier)</small></p>
-    <ul>
-        <li>
-            <span>btnConfirm</span>
-            <ul>
-                <li>
-                    <span>btnConfirm__icon</span>
-                </li>
-                <li>
-                    <span>btnConfirm__caption</span>
-                </li>
-            </ul>
-        </li>
-    </ul>
+    <p>All classes shall be written in small caps and dash separated.</p>
+    <pre><code class="language-css">
+.debt-list {}
+.screen-reader {}
+    </code></pre>
+    <p>The root component element (the component itself) shall be assigned and access via class. If important for semantic or accessibility reasons the tag name and/or attributes may be used to identify it. An exception are the default elements which are provided by the browser (button, input, ...). Those shall be accessed by their tag name and if needed their attributes (like type).</p>
+    <p>Every component shall be in its own separate file.</p>
+    <p>Within the component (nested) all elements shall be accessed via their tag semantic name, position within, state (e.g. pseudo-class, pseudo-element) and if necessary an additional class. All of this shall be nested within the root component element, so in the component file only one selector block is present (with its dependencies within). Exception to this rule are again default elements and their direct neighbors (e.g. label for an input).</p>
+    <p>The selectors within the component shall be specific to where in the nesting they are (use &gt;), so if another component is nested the probability of interference is lower. Additionally every step into nesting shall be stated so the specificity is higher so that accidental overrides are not possible that easily and the intent is clear.</p>
+    <pre><code class="language-css">
+/* component: Debt Card (small parts)*/
+article.debt-card {
+    color: white;
+
+    & > section:nth-of-type(1) {
+        width: 100%;
+
+        & > h2 {
+            color: $white;
+        }
+        & > .amount {
+            font-size: 4rem;
+        }
+    }
+}
+    </code></pre>
+    <pre><code class="language-css">
+/* component: Numeric (small parts) */
+label {
+    color: red;
+
+    & + input[type="number"] {
+        margin-top: -0.3rem;
+    }
+}
+input[type="number"] {
+    border: 0;
+
+    &:hover, &:focus {
+        background-color: darken($secondary, 10%);
+    }
+
+    & + span {
+        color: $white;
+    }
+}
+    </code></pre>
+    <h4>Accessibility</h4>
+    <p>On the root element a font size shall not be set and must not be set with any other unit than em.</p>
+    <p>An icon shall only be a stylistic element and therefor used as a background image or if necessary as an image with a meaningful alt attribute. If it is used as a background image the content on the element shall be the description with the font size of 0 and therefor invisible but accessible for a screen reader.</p>
+    <pre><code class="language-html">
+&lt;!-- component: Icon Button --&gt;
+&lt;button class=&quot;icon success&quot; data-text=&quot;paid&quot;&gt;
+    paid
+&lt;/button&gt;
+    </code></pre>
+    <p>If a connection between elements is created through style an element with the class &quot;screen-reader&quot; shall be inserted so that the connection is clear by only listening to a screen reader. The &quot;screen-reader&quot; makes the element practically invisible while being accessible for only programmatic readers like screen readers and search engines.</p>
+    <pre><code class="language-html">
+&lt;!-- component: Debt Card (small part) --&gt;
+&lt;a href=&quot;#&quot;&gt;
+    &lt;span class=&quot;amount negative&quot;&gt;
+        &lt;span class=&quot;screen-reader&quot;&gt;
+            minus
+        &lt;/span&gt;
+        €17.50
+    &lt;/span&gt;
+    &lt;span&gt;
+        &lt;span class=&quot;screen-reader&quot;&gt;
+            for 
+        &lt;/span&gt;
+        Birthday Gift for Lena
+    &lt;/span&gt;
+&lt;/a&gt;
+    </code></pre>
 </section>
