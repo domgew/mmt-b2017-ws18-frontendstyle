@@ -1,37 +1,52 @@
-import './sass/style.scss'
+import "./sass/style.scss";
 
+import Prism from "prismjs";
+import "prismjs/themes/prism-okaidia.css";
 
-import Prism from 'prismjs';
-import 'prismjs/themes/prism-okaidia.css';
-
-const elements = document.querySelectorAll('.component-preview');
-elements.forEach(element=>{
-    const tabExample = document.createElement('a'), tabHTML = document.createElement('a'), tabCSS = document.createElement('a');
-    const tabLiE = document.createElement('li'),tabLiH = document.createElement('li'),tabLiC = document.createElement('li');
-    const tabUl = document.createElement('ul');
-    const tabs = document.createElement('nav');
+const elements = document.querySelectorAll(".component-preview");
+elements.forEach(element => {
+    const tabExample = document.createElement("a"),
+        tabHTML = document.createElement("a"),
+        tabCSS = document.createElement("a");
+    const tabLiE = document.createElement("li"),
+        tabLiH = document.createElement("li"),
+        tabLiC = document.createElement("li");
+    const tabUl = document.createElement("ul");
+    const tabs = document.createElement("nav");
     //text for tabs
-    tabExample.appendChild(document.createTextNode('Example'));
-    tabExample.setAttribute('data-value','example');
-    tabHTML.appendChild(document.createTextNode('HTML'));
-    tabHTML.setAttribute('data-value','html');
-    tabCSS.appendChild(document.createTextNode('SASS'));
-    tabCSS.setAttribute('data-value','css');
+    tabExample.appendChild(document.createTextNode("Example"));
+    tabExample.setAttribute("data-value", "example");
+    tabHTML.appendChild(document.createTextNode("HTML"));
+    tabHTML.setAttribute("data-value", "html");
+    tabCSS.appendChild(document.createTextNode("SASS"));
+    tabCSS.setAttribute("data-value", "css");
     //event listeners for tabs
-    tabExample.addEventListener('click',(e)=>{
+    tabExample.addEventListener("click", e => {
         e.preventDefault();
-        element.parentElement.classList.remove('show-example','show-html','show-css');
-        element.parentElement.classList.add('show-example');
+        element.parentElement.classList.remove(
+            "show-example",
+            "show-html",
+            "show-css"
+        );
+        element.parentElement.classList.add("show-example");
     });
-    tabHTML.addEventListener('click',(e)=>{
+    tabHTML.addEventListener("click", e => {
         e.preventDefault();
-        element.parentElement.classList.remove('show-example','show-html','show-css');
-        element.parentElement.classList.add('show-html');
+        element.parentElement.classList.remove(
+            "show-example",
+            "show-html",
+            "show-css"
+        );
+        element.parentElement.classList.add("show-html");
     });
-    tabCSS.addEventListener('click',(e)=>{
+    tabCSS.addEventListener("click", e => {
         e.preventDefault();
-        element.parentElement.classList.remove('show-example','show-html','show-css');
-        element.parentElement.classList.add('show-css');
+        element.parentElement.classList.remove(
+            "show-example",
+            "show-html",
+            "show-css"
+        );
+        element.parentElement.classList.add("show-css");
     });
     //tab in list item
     tabLiE.appendChild(tabExample);
@@ -44,5 +59,5 @@ elements.forEach(element=>{
     //unordered list in navigation
     tabs.appendChild(tabUl);
     //insert the navigation before the tabbed view
-    element.parentElement.insertBefore(tabs,element);
+    element.parentElement.insertBefore(tabs, element);
 });
