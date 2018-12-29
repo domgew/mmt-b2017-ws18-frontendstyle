@@ -15,8 +15,9 @@ button.fab {
     will-change: background-image, box-shadow;
     transition-property: background-image, box-shadow;
     transition-duration: 300ms;
-}
-button.fab:hover {
-    background-image: url(../images/plus.svg), linear-gradient(0.25turn, $primary, #825594);
-    box-shadow: 0 0.94488rem 1.1811rem #0000001E; //4mm 5mm
+
+    &:hover {
+        background-image: url(../images/plus.svg), linear-gradient(0.25turn, $primary, #825594);
+        box-shadow: 0 0.94488rem 1.1811rem #0000001E; //4mm 5mm
+    }
 }

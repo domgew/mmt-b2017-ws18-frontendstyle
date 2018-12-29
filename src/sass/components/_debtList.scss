@@ -5,13 +5,13 @@ ul.debt-list {
     align-content: stretch;
     flex-wrap: wrap;
 
-    li {
+    & > li {
         flex: 1 1 calc(50% - 0.5rem);
         max-width: calc(50% - 0.5rem);
         display: block;
         background-color: $secondary;
         border-radius: 0.28346rem;
-        a {
+        & > a {
             padding: 1rem;
             font-family: 'Assistant';
             font-weight: 300;
@@ -19,42 +19,37 @@ ul.debt-list {
             color: $white;
             text-decoration: none;
             display: block;
+
+            & > .amount {
+                display: block;
+    
+                font-family: 'Heebo';
+                font-weight: 300;
+                font-size: 2rem;
+    
+                line-height: 1;
+                
+                &.positive {
+                    color: $success;
+                    text-shadow: 0 0 1px darken($success, 20%);
+                }
+                &.negative {
+                    color: $danger;
+                    text-shadow: 0 0 1px darken($danger, 20%);
+                }
+            }
+    
+            & > span {
+                display: block;
+                white-space: nowrap;
+                overflow: hidden;
+                max-width: 100%;
+                text-overflow: ellipsis;
+            }
         }
 
         &:hover {
             box-shadow: 0.2rem 0.2rem 0.5rem rgba(255,255,255,0.1);
-        }
-
-        .amount {
-            display: block;
-
-            font-family: 'Heebo';
-            font-weight: 300;
-            font-size: 2rem;
-
-            line-height: 1;
-            
-            &.positive {
-                color: $success;
-                text-shadow: 0 0 1px darken($success, 20%);
-            }
-            &.negative {
-                color: $danger;
-                text-shadow: 0 0 1px darken($danger, 20%);
-            }
-            // span {
-            //     visibility: hidden;
-            //     display: inline-block;
-            //     width: 0;
-            // }
-        }
-
-        span {
-            display: block;
-            white-space: nowrap;
-            overflow: hidden;
-            max-width: 100%;
-            text-overflow: ellipsis;
         }
 
         &:nth-of-type(2n) {

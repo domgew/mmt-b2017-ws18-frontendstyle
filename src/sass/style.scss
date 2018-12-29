@@ -114,7 +114,7 @@ main {
         padding: 0 0 0 3rem; 
     }
     ul {
-        padding-left: 4.5rem;
+        padding-left: 2rem;
         li {
             padding: 0.2rem 0;
             span {
@@ -123,14 +123,32 @@ main {
             small{
                 font-size: 1.1rem;
             }
+            
+            &.file {
+                list-style-image: url(../images/file.svg);
+            }
+            &.files {
+                list-style-image: url(../images/files.svg);
+            }
+            &.folder {
+                list-style-image: url(../images/folder.svg);
+            }
         }
+    }
+    & > section > ul {
+        padding-left: 3rem;
     }
     .namingConv{
         span {
             font-weight: 400;
         }
+        h4 {
+            padding-left: 2rem;
+        }
         p{
-            font-weight: 700;
+            font-weight: 400;
+            max-width: 75ch;
+            line-height: 1.5;
         }
     }
 }

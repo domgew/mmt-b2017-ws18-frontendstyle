@@ -9,14 +9,14 @@ label + .addable-combo {
     flex-wrap: nowrap;
     max-width: $maxWidth;
 
-    input[type="text"] {
+    & > input[type="text"] {
         margin-top: 0;
         flex-grow: 1;
         flex-shrink: 1;
         width: 100%;
         max-width: unset;
     }
-    input[type="text"] + button {
+    & > input[type="text"] + button {
         max-width: unset;
         font-size: 0;
         width: 2rem;
@@ -34,7 +34,7 @@ label + .addable-combo {
             background-color: rgba($white, 0.05);
         }
     }
-    input[type="text"] + button + datalist {
+    & > input[type="text"] + button + datalist {
         width: 0;
         height: 0;
         flex-grow: 0;

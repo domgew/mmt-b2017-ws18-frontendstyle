@@ -1,6 +1,6 @@
-dl.list-expander {
-    dt {
-        button {
+dl[role="presentation"].list-expander {
+    & > dt[role="heading"] {
+        & > button {
             display: block;
             width: 100%;
             max-width: unset;
@@ -23,22 +23,22 @@ dl.list-expander {
                 background-color: rgba($secondary, 0.2);
             }
         }
-    }
 
-    dt[data-expanded="false"] {
-        button {
-            background-image: url(../images/pfeil.svg);
+        &[data-expanded="false"] {
+            & > button {
+                background-image: url(../images/pfeil.svg);
+            }
+            & + dd[role="region"] {
+                display: none;
+            }
         }
-        & + dd {
-            display: none;
-        }
-    }
-    dt[data-expanded="true"] {
-        button {
-            background-image: url(../images/pfeil_inv.svg);
-        }
-        & + dd {
-            display: block;
+        &[data-expanded="true"] {
+            button {
+                background-image: url(../images/pfeil_inv.svg);
+            }
+            & + dd[role="region"] {
+                display: block;
+            }
         }
     }
     

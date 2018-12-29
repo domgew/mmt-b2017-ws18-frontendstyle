@@ -28,6 +28,13 @@ body, & {
     display: inline-block;
     width: 1px;
     font-size: 1px;
+    max-width: 1px;
+    max-height: 1px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: clip;
+    word-wrap: none;
+    word-break: keep-all;
 }
 
 @import "button_reset";
