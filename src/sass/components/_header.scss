@@ -31,26 +31,36 @@ header {
         position: absolute;
         top: 0.25rem;
 
-        &:hover {
-            box-shadow: 0 0 1rem rgba(255,255,255,0.3);
-            background-position: center;
-        }
-
-        &.back, &.help, &.close {
+        &.btn-back, &.btn-help, &.btn-close {
             background-repeat: no-repeat;
             background-size: 2rem 2rem;
         }
-        &.back {
+        &.btn-back {
             background-image: url(../images/backpfeil.svg);
             left: 1rem;
+
+            &:hover{
+                background-image: url(../images/backpfeil_hover.svg);
+                background-position: center;
+            }
         }
-        &.help {
+        &.btn-help {
             background-image: url(../images/help.svg);
             right: 1rem;
+
+            &:hover {
+                background-image: url(../images/help_hover.svg);
+                background-position: center;
+            }
         }
-        &.close {
+        &.btn-close {
             background-image: url(../images/close.svg);
             right: 1rem;
+
+            &:hover {
+                background-image: url(../images/close_hover.svg);
+                background-position: center;
+            }
         }
     }
 }

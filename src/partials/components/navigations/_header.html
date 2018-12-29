@@ -3,31 +3,31 @@
     <div class="component">
         <div class="component-preview">
             <div class="example">
-                <header>
+                <header class="header-main">
                     <h1>
                         <a href="#">
                             <img src="${require('../../../images/logo_white.svg')}" alt="debtrack">
                         </a>
                     </h1>
-                    <button class="help">
+                    <button class="btn-help">
                         help
                     </button>
                 </header>
             </div>
             <pre><code class="language-html">
-&lt;header&gt;
+&lt;header class="header-main"&gt;
     &lt;h1&gt;
         &lt;a href=&quot;#&quot;&gt;
             &lt;img src=&quot;${require('../../../images/logo_white.svg')}&quot; alt=&quot;debtrack&quot;&gt;
         &lt;/a&gt;
     &lt;/h1&gt;
-    &lt;button class=&quot;help&quot;&gt;
+    &lt;button class=&quot;btn-help&quot;&gt;
         help
     &lt;/button&gt;
 &lt;/header&gt;
             </code></pre>
             <pre><code class="language-css">
-header {
+.header-main {
     display: block;
     position: relative;
     height: 3rem;
@@ -60,26 +60,16 @@ header {
         position: absolute;
         top: 0.25rem;
 
-        &:hover {
-            box-shadow: 0 0 1rem rgba(255,255,255,0.3);
-            background-position: center;
-        }
-
-        &.back, &.help, &.close {
+        &.btn-help {
             background-repeat: no-repeat;
             background-size: 2rem 2rem;
-        }
-        &.back {
-            background-image: url(${require('../../../images/backpfeil.svg')});
-            left: 1rem;
-        }
-        &.help {
             background-image: url(${require('../../../images/help.svg')});
             right: 1rem;
-        }
-        &.close {
-            background-image: url(${require('../../../images/close.svg')});
-            right: 1rem;
+
+            &:hover {
+                background-image: url(${require('../../../images/help_hover.svg')});
+                background-position: center;
+            }
         }
     }
 }
