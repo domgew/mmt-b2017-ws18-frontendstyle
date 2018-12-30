@@ -26,7 +26,7 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <meta name="apple-mobile-web-app-title" content="debtrack">
-    <!-- <link rel="apple-touch-icon" href="images/touch/apple-touch-icon.png"> -->
+    <link rel="apple-touch-icon" sizes="180x180" href=" <%=require('./images/favicon/apple-touch-icon.png')%>">
 
     <!-- Tile icon for Win8 (144x144 + tile color) -->
     <meta name="msapplication-TileImage" content="<%=require('./images/logo_white.svg')%>">
@@ -36,17 +36,10 @@
     <meta name="theme-color" content="#2B2B2B">
 
     <!-- Favicon use -->
-    <link rel="apple-touch-icon" sizes="180x180" href=" <%=require('./images/favicon/apple-touch-icon.png')%>">
     <link rel="icon" type="image/png" sizes="32x32" href=" <%=require('./images/favicon/favicon-32x32.png')%>">
     <link rel="icon" type="image/png" sizes="16x16" href=" <%=require('./images/favicon/favicon-16x16.png')%>">
-    <link rel="mask-icon" href=" <%=require('./images/favicon/safari-pinned-tab.svg')%>" color="#474747">
-    <meta name="msapplication-TileColor" content="#474747">
-    <meta name="theme-color" content="#ffffff">
+    <link rel="mask-icon" href=" <%=require('./images/favicon/safari-pinned-tab.svg')%>" color="#2B2B2B">
 
-    <!-- SEO: If your mobile URL is different from the desktop URL, add a canonical link to the desktop page https://developers.google.com/webmasters/smartphone-sites/feature-phones -->
-    <!--
-            <link rel="canonical" href="http://www.example.com/">
-        -->
     <link href="https://fonts.googleapis.com/css?family=Assistant:200,300,400,600,700|Heebo:100,300,400,500,700" rel="stylesheet">
     <link rel="stylesheet" href="<%=htmlWebpackPlugin.files.chunks.main.css %>">
 </head>
