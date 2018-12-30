@@ -10,7 +10,7 @@
         An exception are the default elements (which are provided by the browser, like button, input, ...). 
         Those shall be accessed by their tag name and if needed their attributes (like type).</p>
     <p>Every component shall be in its own <strong>separate file</strong>.</p>
-    <p>Within a component <strong>all nested elements</strong> shall be accessed via their semantic tag name, position within, 
+    <p>Within a component <strong>all nested elements</strong> shall be accessed via their semantic tag name, position within and 
         state (e.g. pseudo-class, pseudo-element). If it is necessary an additional class can be used.
         Because of the nesting, each component file has <strong>only one selector block</strong> (with its dependencies within).
         Exception to this rule are again default elements and their direct neighbors (e.g. label for an input).</p>
@@ -56,7 +56,7 @@ input[type="number"] {
 }
     </code></pre>
     <h4>Accessibility</h4>
-    <p>The <strong>font size</strong> is always set in <strong>em</strong>, no other unit should be used. 
+    <p>The <strong>font size</strong> is always set in <strong>em or rem</strong>, no other unit should be used. 
         Never set a font size on the root element because otherwise the font size settings of the browser might be ignored.</p>
     <p>An <strong>icon</strong> shall only be a stylistic element and therefor used as a background image
          or if necessary as an image with a meaningful alt attribute. 
