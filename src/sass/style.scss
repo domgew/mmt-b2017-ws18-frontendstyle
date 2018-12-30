@@ -275,6 +275,9 @@ footer {
     main {
         margin: 10rem 2rem 8rem;
     }
+    #logos img {
+        width: 70%;
+    }
 }
 
 @media screen and (max-width:780px){
@@ -324,5 +327,9 @@ footer {
         ul {
             padding-left: 1.5rem;
         }
+    }
+
+    #logos img {
+        width: 100%;
     }
 }
