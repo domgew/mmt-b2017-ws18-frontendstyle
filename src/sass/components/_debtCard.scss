@@ -44,6 +44,7 @@ article.debt-card {
     & > section:nth-of-type(2) {
         flex-grow: 0;
         flex-shrink: 0;
+        align-self: stretch;
         width: 6rem;
         display: flex;
         justify-content: center;

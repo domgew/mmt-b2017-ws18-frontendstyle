@@ -75,6 +75,11 @@ module.exports = {
         }]
       },
 
+      {
+        test: /\.ico$/,
+        use: 'file-loader'
+      },
+
       // include images in your build
       {
         test: /\.(png|svg|jpg|gif)$/,

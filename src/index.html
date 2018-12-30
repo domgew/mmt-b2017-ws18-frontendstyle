@@ -1,9 +1,5 @@
 <!DOCTYPE html>
 
-<!--
-    * create new images/icon-touch, eg. with https://realfavicongenerator.net/
--->
-
 <html lang="en">
 
 <head>
@@ -14,31 +10,26 @@
     <meta name="referrer" content="same-origin">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-    <!-- Disable tap highlight on IE -->
     <meta name="msapplication-tap-highlight" content="no">
 
-    <!-- Add to homescreen for Chrome on Android -->
-    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="no">
     <meta name="application-name" content="debtrack">
-    <!-- <link rel="icon" sizes="192x192" href="images/touch/chrome-touch-icon-192x192.png"> -->
 
-    <!-- Add to homescreen for Safari on iOS -->
-    <meta name="apple-mobile-web-app-capable" content="yes">
+    <link rel="icon" type="image/png" sizes="384x384" href="<%=require('./images/favicon/android-chrome-384x384.png')%>">
+    <link rel="icon" type="image/png" sizes="192x192" href="<%=require('./images/favicon/android-chrome-192x192.png')%>">
+    <link rel="icon" type="image/png" sizes="32x32" href="<%=require('./images/favicon/favicon-32x32.png')%>">
+    <link rel="icon" type="image/png" sizes="16x16" href="<%=require('./images/favicon/favicon-16x16.png')%>">
+    <link rel="icon" type="image/x-icon" href="<%=require('./images/favicon/favicon.ico')%>">
+    <link rel="mask-icon" href=" <%=require('./images/favicon/safari-pinned-tab.svg')%>" color="#2B2B2B">
+
+    <meta name="apple-mobile-web-app-capable" content="no">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <meta name="apple-mobile-web-app-title" content="debtrack">
     <link rel="apple-touch-icon" sizes="180x180" href=" <%=require('./images/favicon/apple-touch-icon.png')%>">
 
-    <!-- Tile icon for Win8 (144x144 + tile color) -->
-    <meta name="msapplication-TileImage" content="<%=require('./images/logo_white.svg')%>">
+    <meta name="msapplication-TileImage" content="<%=require('./images/favicon/mstile-150x150.png')%>">
     <meta name="msapplication-TileColor" content="#2B2B2B">
-
-    <!-- Color the status bar on mobile devices -->
     <meta name="theme-color" content="#2B2B2B">
-
-    <!-- Favicon use -->
-    <link rel="icon" type="image/png" sizes="32x32" href=" <%=require('./images/favicon/favicon-32x32.png')%>">
-    <link rel="icon" type="image/png" sizes="16x16" href=" <%=require('./images/favicon/favicon-16x16.png')%>">
-    <link rel="mask-icon" href=" <%=require('./images/favicon/safari-pinned-tab.svg')%>" color="#2B2B2B">
 
     <link href="https://fonts.googleapis.com/css?family=Assistant:200,300,400,600,700|Heebo:100,300,400,500,700" rel="stylesheet">
     <link rel="stylesheet" href="<%=htmlWebpackPlugin.files.chunks.main.css %>">
@@ -58,9 +49,9 @@
         <div class="balken"></div>
         <section class="introduction">
             <p>
-                    With the mobile app debtrack it is very easy to keep an overview of your debts. 
-                    You can note down what someone owes you and even split costs between various people. 
-                    Send them a reminder directly from the app to receive your money asap. 
+                    With the mobile web app debtrack it is very easy to keep an overview of your debts. 
+                    You can note what someone owes you and even split costs between various people. 
+                    Send them a reminder directly from the app to receive your money as soon as possible. 
                     Billing with your friends after the next pizza order has never been so easy!
             </p>
             <p>

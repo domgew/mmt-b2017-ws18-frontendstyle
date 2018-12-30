@@ -5,30 +5,38 @@
 .debt-list {}
 .screen-reader {}
     </code></pre>
-    <p>Classes should be assigned to <strong>root component elements</strong> so that these can be accessed through the class.
+    <p>
+        Classes should be assigned to <strong>root component elements</strong> so that these can be accessed through their class.
         The tag name and/or attributes may be used to identify the element if it is necessary for semantic or accessibility reasons. 
         An exception are the default elements (which are provided by the browser, like button, input, ...). 
-        Those shall be accessed by their tag name and if needed their attributes (like type).</p>
-    <p>Every component shall be in its own <strong>separate file</strong>.</p>
-    <p>Within a component <strong>all nested elements</strong> shall be accessed via their semantic tag name, position within and 
+        Those shall be accessed by their tag name and if needed their attributes (like type).
+    </p>
+    <p>
+        Every component shall be in its own <strong>separate file</strong>.
+    </p>
+    <p>
+        Within a component <strong>all nested elements</strong> shall be accessed via their semantic tag name, position within and 
         state (e.g. pseudo-class, pseudo-element). If it is necessary an additional class can be used.
         Because of the nesting, each component file has <strong>only one selector block</strong> (with its dependencies within).
-        Exception to this rule are again default elements and their direct neighbors (e.g. label for an input).</p>
-    <p>The selectors within a component need to be <strong>specific</strong>. They should clearly point to a nested element (use &gt;), 
+        Exception to this rule are again default elements and their direct neighbors (e.g. label for an input).
+    </p>
+    <p>
+        The selectors within a component need to be <strong>specific</strong>. They should clearly point to a nested element (use &gt;), 
         so the probability of interference is lower. 
-        To prevent accidental overrides and increase the specificity, always use the explicit path to a nested element.</p>
+        To prevent accidental overrides and increase the specificity, always use the explicit path to a nested element.
+    </p>
     <pre><code class="language-css">
 /* component: Debt Card (small parts)*/
 article.debt-card {
     color: white;
 
-    & > section:nth-of-type(1) {
+    & > section:nth-of-type(1) { /* position within */
         width: 100%;
 
-        & > h2 {
+        & > h2 { /* semantic tag &amp; path */
             color: $white;
         }
-        & > .amount {
+        & > .amount { /* class if needed */
             font-size: 4rem;
         }
     }
@@ -56,22 +64,28 @@ input[type="number"] {
 }
     </code></pre>
     <h4>Accessibility</h4>
-    <p>The <strong>font size</strong> is always set in <strong>em or rem</strong>, no other unit should be used. 
-        Never set a font size on the root element because otherwise the font size settings of the browser might be ignored.</p>
-    <p>An <strong>icon</strong> shall only be a stylistic element and therefor used as a background image
+    <p>
+        The <strong>font size</strong> is always set in <strong>em or rem</strong>, no other unit should be used. 
+        Never set a font size on the root element because otherwise the font size settings of the browser might be ignored.
+    </p>
+    <p>
+        An <strong>icon</strong> shall only be a stylistic element and therefor used as a background image
          or if necessary as an image with a meaningful alt attribute. 
          If it is used as a background image the content of the element shall be the 
-         description with the font size of 0 and therefor invisible but accessible for a screen reader.</p>
+         description with the font size of 0 and therefor invisible but accessible for a screen reader.
+    </p>
     <pre><code class="language-html">
 &lt;!-- component: Icon Button --&gt;
 &lt;button class=&quot;icon success&quot; data-text=&quot;paid&quot;&gt;
     paid
 &lt;/button&gt;
     </code></pre>
-    <p>If a connection between elements is created through style an element with the 
+    <p>
+        If a connection between elements is created through style an element with the 
         <strong>class &quot;screen-reader&quot;</strong>  shall be inserted so that the connection is clear by 
-        only listening to a screen reader. The &quot;screen-reader&quot; makes the element practically 
-        invisible while being accessible for only programmatic readers like screen readers and search engines.</p>
+        only listening to a screen reader. The &quot;screen-reader&quot; class makes the element practically 
+        invisible while being accessible for only programmatic readers like screen readers and search engines.
+    </p>
     <pre><code class="language-html">
 &lt;!-- component: Debt Card (small part) --&gt;
 &lt;a href=&quot;#&quot;&gt;
